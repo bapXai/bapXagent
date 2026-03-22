@@ -127,21 +127,28 @@ Each agent can be configured with custom tools, workflows, knowledge bases, and 
 
 ## 🏗️ Platform Architecture
 
-![Architecture Diagram](docs/images/diagram.png)
+![Architecture Diagram](apps/frontend/public/architecture.svg)
 
-bapX consists of four main components that work together to provide a complete AI agent development platform:
+bapX consists of three main layers that work together to provide a complete AI agent development platform:
 
-### 🔧 Backend API
-Python/FastAPI service that powers the agent platform with REST endpoints, thread management, agent orchestration, and LLM integration with Anthropic, OpenAI, and others via LiteLLM. Includes agent builder tools, workflow management, and extensible tool system.
+### 👥 User Layer
+Multiple access points for users to interact with the platform:
+- **Web App** - Browser-based interface
+- **Mobile App** - iOS and Android applications
+- **Desktop App** - Native desktop client
+- **API Access** - Direct API integration
 
-### 🖥️ Frontend Dashboard
-Next.js/React application providing a comprehensive agent management interface with chat interfaces, agent configuration dashboards, workflow builders, monitoring tools, and deployment controls.
+### 🖥️ Application Layer
+Core application components:
+- **Frontend** - Next.js-based user interface
+- **Backend API** - FastAPI REST API
+- **Agent Runtime** - Isolated execution environments
 
-### 🐳 Agent Runtime
-Isolated Docker execution environments for each agent instance featuring browser automation, code interpreter, file system access, tool integration, security sandboxing, and scalable agent deployment.
-
-### 🗄️ Database & Storage
-Supabase-powered data layer handling authentication, user management, agent configurations, conversation history, file storage, workflow state, analytics, and real-time subscriptions for live agent monitoring.
+### 💾 Data Layer
+Secure and scalable data storage:
+- **User Database** - Per-user isolated databases
+- **Auth System** - JWT-based authentication
+- **File Storage** - Encrypted file storage
 
 ## 🚀 Quick Start
 

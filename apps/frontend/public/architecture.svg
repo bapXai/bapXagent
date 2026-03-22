@@ -1,0 +1,101 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- bapX Platform Architecture Diagram -->
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#1e293b">bapX Platform Architecture</text>
+  
+  <!-- User Layer -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="url(#headerGrad)"/>
+    <text x="350" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white">User Layer</text>
+  </g>
+  
+  <!-- User Boxes -->
+  <g transform="translate(80, 150)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="60" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#1e293b">Web App</text>
+  </g>
+  <g transform="translate(240, 150)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="60" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#1e293b">Mobile App</text>
+  </g>
+  <g transform="translate(400, 150)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="60" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#1e293b">Desktop App</text>
+  </g>
+  <g transform="translate(560, 150)">
+    <rect x="0" y="0" width="120" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="60" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#1e293b">API Access</text>
+  </g>
+  
+  <!-- Arrow down -->
+  <line x1="400" y1="220" x2="400" y2="250" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Application Layer -->
+  <g transform="translate(50, 260)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="url(#headerGrad)"/>
+    <text x="350" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white">Application Layer</text>
+  </g>
+  
+  <!-- App Boxes -->
+  <g transform="translate(80, 340)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">Frontend</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Next.js</text>
+  </g>
+  <g transform="translate(270, 340)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">Backend API</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">FastAPI</text>
+  </g>
+  <g transform="translate(460, 340)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">Agent Runtime</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Isolated</text>
+  </g>
+  
+  <!-- Arrow down -->
+  <line x1="400" y1="410" x2="400" y2="440" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Data Layer -->
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="url(#headerGrad)"/>
+    <text x="350" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="white">Data Layer</text>
+  </g>
+  
+  <!-- Data Boxes -->
+  <g transform="translate(80, 530)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">User Database</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Per-user isolated</text>
+  </g>
+  <g transform="translate(270, 530)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">Auth System</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">JWT-based</text>
+  </g>
+  <g transform="translate(460, 530)">
+    <rect x="0" y="0" width="150" height="50" rx="6" fill="url(#boxGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#1e293b">File Storage</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Encrypted</text>
+  </g>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" rx="12" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+</svg>
