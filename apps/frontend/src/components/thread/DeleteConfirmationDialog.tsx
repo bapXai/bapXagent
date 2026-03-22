@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 import {
   AlertDialog,
@@ -63,7 +63,7 @@ export function DeleteConfirmationDialog({
           >
             {isDeleting ? (
               <>
-                <bapXLoader size="small" className="mr-2" />
+                <BapXLoader size="small" className="mr-2" />
                 Deleting...
               </>
             ) : (

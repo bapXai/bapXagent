@@ -16,7 +16,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Search, Save, AlertCircle, Filter, X, ChevronDown } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { backendApi } from '@/lib/api-client';
 import { useComposioTools } from '@/hooks/composio/use-composio';
 import { cn } from '@/lib/utils';
@@ -551,7 +551,7 @@ export const ComposioToolsSelector: React.FC<ComposioToolsSelectorProps> = ({
               >
                 {isSaving ? (
                   <>
-                    <bapXLoader customSize={16} className="mr-1" />
+                    <BapXLoader customSize={16} className="mr-1" />
                     Saving...
                   </>
                 ) : (

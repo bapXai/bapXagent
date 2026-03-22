@@ -5,7 +5,7 @@ import { Globe, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { AnimatedBg } from '@/components/ui/animated-bg';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 export default function CountryError() {
   return (
@@ -16,7 +16,7 @@ export default function CountryError() {
 
         <div className="relative z-10 w-full max-w-[456px] flex flex-col items-center gap-5 sm:gap-8">
           {/* Logo */}
-          <bapXLogo size={28} className="sm:w-8 sm:h-8" />
+          <BapXLogo size={28} className="sm:w-8 sm:h-8" />
 
           {/* Title */}
           <h1 className="text-2xl sm:text-3xl md:text-[43px] font-normal tracking-tight text-foreground leading-tight text-center">

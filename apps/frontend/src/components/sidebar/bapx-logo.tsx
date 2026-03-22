@@ -2,13 +2,13 @@
 
 import { cn } from '@/lib/utils';
 
-interface bapXLogoProps {
+interface BapXLogoProps {
   size?: number;
   variant?: 'symbol' | 'logomark';
   className?: string;
 }
 
-export function bapXLogo({ size = 24, variant = 'symbol', className }: bapXLogoProps) {
+export function BapXLogo({ size = 24, variant = 'symbol', className }: BapXLogoProps) {
   // For logomark variant, use logomark-white.svg which is already white
   // and invert it for light mode using CSS (no JS needed)
   if (variant === 'logomark') {

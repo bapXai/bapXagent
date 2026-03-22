@@ -13,7 +13,7 @@ import {
   SkipForward,
   Edit,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -483,7 +483,7 @@ export function FullScreenPresentationViewer({
                   disabled={isDownloadingPDF || isDownloadingPPTX || isDownloadingGoogleSlides}
                 >
                   {(isDownloadingPDF || isDownloadingPPTX || isDownloadingGoogleSlides) ? (
-                    <bapXLoader customSize={14} />
+                    <BapXLoader customSize={14} />
                   ) : (
                     <Download className="h-3.5 w-3.5" />
                   )}
@@ -535,7 +535,7 @@ export function FullScreenPresentationViewer({
       <div className="flex-1 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 p-2 min-h-0">
         {isLoading || !currentSlideData ? (
           <div className="text-center">
-            <bapXLoader size="large" className="mx-auto mb-4" />
+            <BapXLoader size="large" className="mx-auto mb-4" />
             <p className="text-zinc-700 dark:text-zinc-300">
               {retryAttempt > 0 ? `Retrying... (attempt ${retryAttempt + 1})` : 'Loading presentation...'}
             </p>

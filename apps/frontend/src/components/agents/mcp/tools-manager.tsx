@@ -22,7 +22,7 @@ import {
   RefreshCw,
   Save
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 
 import { useCustomMCPToolsData } from '@/hooks/agents/use-custom-mcp-tools';
@@ -323,7 +323,7 @@ export const ToolsManager: React.FC<ToolsManagerProps> = (props) => {
                 >
                   {isUpdating ? (
                     <>
-                      <bapXLoader customSize={16} className="mr-2" />
+                      <BapXLoader customSize={16} className="mr-2" />
                       Saving...
                     </>
                   ) : saveMode === 'callback' ? (

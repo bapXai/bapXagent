@@ -19,9 +19,9 @@ import { clearUserLocalStorage } from '@/lib/utils/clear-local-storage';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { LogOut, Shield } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useMutation } from '@tanstack/react-query';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 const AnimatedBg = lazy(() => import('@/components/ui/animated-bg').then(mod => ({ default: mod.AnimatedBg })));
 
@@ -249,7 +249,7 @@ export function PhoneVerificationPage({
 
       <div className="absolute top-6 left-6 z-10">
         <Link href="/" className="flex items-center space-x-2">
-          <bapXLogo size={28} />
+          <BapXLogo size={28} />
         </Link>
       </div>
 
@@ -262,7 +262,7 @@ export function PhoneVerificationPage({
           className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
         >
           {signOutMutation.isPending ? (
-            <bapXLoader size="small" />
+            <BapXLoader size="small" />
           ) : (
             <LogOut className="h-4 w-4" />
           )}

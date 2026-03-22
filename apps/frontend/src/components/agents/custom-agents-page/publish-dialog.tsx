@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Globe, Plus, Trash2, User, Bot, Wrench } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -224,7 +224,7 @@ export const PublishDialog = ({
           >
             {templatesActioningId ? (
               <>
-                <bapXLoader customSize={16} className="mr-1" />
+                <BapXLoader customSize={16} className="mr-1" />
                 Publishing...
               </>
             ) : (

@@ -2,7 +2,7 @@ import { ToolViewProps } from '../types';
 import { getToolTitle } from '../utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, Download, RefreshCw } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useMemo, useState, useCallback } from 'react';
 import { SpreadsheetSimulation } from './SpreadsheetSimulation';
 import { SpreadsheetViewer, SyncState } from './SpreadsheetViewer';
@@ -92,7 +92,7 @@ export function SpreadsheetToolView({
           <div className="flex items-center gap-2">
             <div className="relative p-2 rounded-lg border flex-shrink-0 bg-zinc-100 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
               {isStreaming || isLoading ? (
-                <bapXLoader customSize={20} />
+                <BapXLoader customSize={20} />
               ) : (
                 <Table className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
               )}
@@ -126,7 +126,7 @@ export function SpreadsheetToolView({
                   title="Download file"
                 >
                   {isDownloading ? (
-                    <bapXLoader customSize={12} />
+                    <BapXLoader customSize={12} />
                   ) : (
                     <Download className="w-3 h-3" />
                   )}
@@ -138,7 +138,7 @@ export function SpreadsheetToolView({
                   disabled={isLoading || syncState.status === 'syncing'}
                   className="h-7 px-2"
                 >
-                  {isLoading ? <bapXLoader customSize={12} /> : <RefreshCw className="w-3 h-3" />}
+                  {isLoading ? <BapXLoader customSize={12} /> : <RefreshCw className="w-3 h-3" />}
                 </Button>
               </>
             )}

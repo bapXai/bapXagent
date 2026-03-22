@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { AlertTriangle, ExternalLink, Square, Zap, X } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -161,7 +161,7 @@ export const AgentRunLimitBanner: React.FC<AgentRunLimitBannerProps> = ({
           {/* Running agent info */}
           {isAnyLoading ? (
             <div className="flex items-center justify-center py-6">
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
               <span className="ml-2 text-sm text-muted-foreground">Loading active worker...</span>
             </div>
           ) : firstRunningAgent?.agentRun ? (
@@ -193,7 +193,7 @@ export const AgentRunLimitBanner: React.FC<AgentRunLimitBannerProps> = ({
                         disabled={stopAgentMutation.isPending}
                       >
                         {stopAgentMutation.isPending ? (
-                          <bapXLoader size="small" />
+                          <BapXLoader size="small" />
                         ) : (
                           <Square className="h-3 w-3" />
                         )}

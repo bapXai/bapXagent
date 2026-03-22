@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
 
-interface bapXLoaderProps {
+interface BapXLoaderProps {
   /**
    * Size preset for the loader
    * @default 'medium'
@@ -73,19 +73,19 @@ const SIZE_MAP = {
  * @example
  * ```tsx
  * // Auto-themed (default)
- * <bapXLoader />
+ * <BapXLoader />
  * 
  * // Always white (for dark backgrounds in any theme)
- * <bapXLoader variant="white" />
+ * <BapXLoader variant="white" />
  * 
  * // Always black (for light backgrounds in any theme)
- * <bapXLoader variant="black" />
+ * <BapXLoader variant="black" />
  * 
  * // Custom size
- * <bapXLoader size="large" />
+ * <BapXLoader size="large" />
  * ```
  */
-export function bapXLoader({
+export function BapXLoader({
   size = 'medium',
   speed = 1.2,
   customSize,
@@ -95,7 +95,7 @@ export function bapXLoader({
   loop = true,
   variant = 'auto',
   forceTheme, // deprecated, but kept for backwards compatibility
-}: bapXLoaderProps) {
+}: BapXLoaderProps) {
   const { resolvedTheme } = useTheme();
   const loaderSize = customSize || SIZE_MAP[size];
   

@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { Search, Plus, Check, ChevronDown } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -253,7 +253,7 @@ export const AgentSelector: React.FC<AgentSelectorProps> = ({
               >
                 {isFetching ? (
                   <>
-                    <bapXLoader customSize={12} className="mr-1" />
+                    <BapXLoader customSize={12} className="mr-1" />
                     Loading...
                   </>
                 ) : (

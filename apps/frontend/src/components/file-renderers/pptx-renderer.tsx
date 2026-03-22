@@ -7,7 +7,7 @@ import {
   Download,
   AlertTriangle,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import DocViewer, { DocViewerRenderers } from '@cyntler/react-doc-viewer';
 import '@cyntler/react-doc-viewer/dist/index.css';
 import { constructHtmlPreviewUrl } from '@/lib/utils/url';
@@ -92,7 +92,7 @@ export function PptxRenderer({
   if (isLoading) {
     return (
       <div className={cn('w-full h-full flex items-center justify-center', className)}>
-        <bapXLoader size="medium" />
+        <BapXLoader size="medium" />
       </div>
     );
   }
@@ -108,7 +108,7 @@ export function PptxRenderer({
           </p>
           {onDownload && (
             <Button size="sm" onClick={onDownload} disabled={isDownloading}>
-              {isDownloading ? <bapXLoader size="small" /> : <Download className="h-4 w-4 mr-2" />}
+              {isDownloading ? <BapXLoader size="small" /> : <Download className="h-4 w-4 mr-2" />}
               Download
             </Button>
           )}

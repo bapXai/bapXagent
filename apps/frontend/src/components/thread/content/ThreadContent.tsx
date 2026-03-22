@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, memo, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useTranslations } from "next-intl";
 import {
   UnifiedMessage,
@@ -18,7 +18,7 @@ import {
   extractUserMessageTextForDedup,
   extractAttachmentFingerprint,
 } from "@/components/thread/utils";
-import { bapXLogo } from "@/components/sidebar/bapx-logo";
+import { BapXLogo } from "@/components/sidebar/bapx-logo";
 import { AgentLoader } from "./loader";
 import { ShowToolStream } from "./ShowToolStream";
 import { ComposioUrlDetector } from "./composio-url-detector";
@@ -1059,7 +1059,7 @@ const AssistantGroupRow = memo(function AssistantGroupRow({
               }
               className="inline-flex items-center gap-1.5 h-8 px-2 py-1.5 text-xs text-muted-foreground bg-card hover:bg-card/80 rounded-lg transition-colors cursor-pointer border border-neutral-200 dark:border-neutral-700/50 max-w-full"
             >
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
               <span className="font-mono text-xs text-foreground truncate">
                 Using Tool
               </span>
@@ -1298,7 +1298,7 @@ export const ThreadContent: React.FC<ThreadContentProps> = memo(
     project,
     isPreviewMode = false,
     agentName = "bapX",
-    agentAvatar = <bapXLogo size={14} />,
+    agentAvatar = <BapXLogo size={14} />,
     emptyStateComponent,
     threadMetadata,
     scrollContainerRef,
@@ -1355,7 +1355,7 @@ export const ThreadContent: React.FC<ThreadContentProps> = memo(
           name,
           avatar: (
             <div className="h-5 w-5 flex items-center justify-center rounded text-xs">
-              <bapXLogo size={14} />
+              <BapXLogo size={14} />
             </div>
           ),
         };
@@ -1850,7 +1850,7 @@ export const ThreadContent: React.FC<ThreadContentProps> = memo(
                     <span className="font-mono text-xs text-primary">
                       {currentToolCall.name || "Using Tool"}
                     </span>
-                    <bapXLoader size="small" className="ml-auto" />
+                    <BapXLoader size="small" className="ml-auto" />
                   </div>
                 </div>
               </div>

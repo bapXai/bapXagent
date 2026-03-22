@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { AlertTriangle, ExternalLink, X, Square, Zap, Rocket } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -107,7 +107,7 @@ const RunningThreadItem: React.FC<RunningThreadItemProps> = ({
                 disabled={stopAgentMutation.isPending || threadInfo.isLoading}
               >
                 {stopAgentMutation.isPending ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <Square className="h-3 w-3" />
                 )}
@@ -294,7 +294,7 @@ export const AgentRunLimitDialog: React.FC<AgentRunLimitDialogProps> = ({
           
           {isLoadingThreads ? (
             <div className="flex items-center justify-center py-4">
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
               <span className="ml-2 text-sm text-muted-foreground">Loading threads...</span>
             </div>
           ) : runningThreadIds.length === 0 ? (

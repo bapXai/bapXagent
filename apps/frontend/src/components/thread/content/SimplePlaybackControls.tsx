@@ -9,7 +9,7 @@ import {
   PanelRightOpen 
 } from 'lucide-react';
 import Link from 'next/link';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 interface SimplePlaybackControlsProps {
   projectName: string;
@@ -40,7 +40,7 @@ export function SimplePlaybackControls({
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity"
         >
-          <bapXLogo className="h-5 w-5" />
+          <BapXLogo className="h-5 w-5" />
           <span className="hidden sm:inline">bapX</span>
         </Link>
 

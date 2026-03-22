@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Plus, FileJson, Code } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -152,7 +152,7 @@ export function NewAgentDialogLegacy({ open, onOpenChange, onSuccess }: NewAgent
           >
             {createNewAgentMutation.isPending ? (
               <>
-                <bapXLoader customSize={16} className="mr-1" />
+                <BapXLoader customSize={16} className="mr-1" />
                 Creating...
               </>
             ) : (

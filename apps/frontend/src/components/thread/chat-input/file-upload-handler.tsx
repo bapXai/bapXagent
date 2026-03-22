@@ -3,7 +3,7 @@
 import React, { forwardRef, useEffect, memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Paperclip } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from '@/lib/toast';
 import { createClient } from '@/lib/supabase/client';
 import { useQueryClient } from '@tanstack/react-query';
@@ -541,7 +541,7 @@ export const FileUploadHandler = memo(forwardRef<
                 }
               >
                 {isUploading ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <Paperclip className="h-4 w-4" strokeWidth={2} />
                 )}

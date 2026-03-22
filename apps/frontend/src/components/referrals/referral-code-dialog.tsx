@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { useTranslations } from 'next-intl';
 
 interface ReferralCodeDialogProps {
@@ -41,7 +41,7 @@ export function ReferralCodeDialog({ open, onOpenChange, referralCode = '', onCo
           {/* Logo & Header */}
           <div className="flex flex-col items-center text-center mb-4">
             <div className="mb-2 p-2 rounded-xl bg-muted/50">
-              <bapXLogo size={24} variant="symbol" />
+              <BapXLogo size={24} variant="symbol" />
             </div>
             <DialogTitle className="text-base sm:text-lg font-semibold">
               {t('yourReferralCode')}

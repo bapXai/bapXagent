@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Save } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Button } from '@/components/ui/button';
 import {
@@ -144,7 +144,7 @@ export function CreateVersionButton({
             >
               {createVersionMutation.isPending ? (
                 <>
-                  <bapXLoader customSize={16} className="mr-2" />
+                  <BapXLoader customSize={16} className="mr-2" />
                   Creating...
                 </>
               ) : (

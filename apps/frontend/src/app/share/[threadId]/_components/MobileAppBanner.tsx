@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 // Detect if user is on mobile device
 function isMobileDevice(): boolean {
@@ -108,7 +108,7 @@ export function MobileAppBanner({ threadId }: MobileAppBannerProps) {
         <div className="flex items-center gap-3">
           {/* App icon */}
           <div className="shrink-0 w-10 h-10 rounded-xl bg-foreground flex items-center justify-center">
-            <bapXLogo size={20} className="invert dark:invert-0" />
+            <BapXLogo size={20} className="invert dark:invert-0" />
           </div>
 
           {/* Content */}

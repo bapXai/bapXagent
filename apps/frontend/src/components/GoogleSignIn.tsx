@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { toast } from '@/lib/toast';
 import { Icons } from './home/icons';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 
@@ -54,7 +54,7 @@ export default function GoogleSignIn({ returnUrl, referralCode }: GoogleSignInPr
       type="button"
     >
       {isLoading ? (
-        <bapXLoader size="small" />
+        <BapXLoader size="small" />
       ) : (
         <Icons.google className="w-4 h-4" />
       )}

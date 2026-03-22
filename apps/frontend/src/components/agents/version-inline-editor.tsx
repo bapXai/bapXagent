@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Edit2, Check, X } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useUpdateVersionDetails } from '@/hooks/agents/use-agent-versions';
 import { cn } from '@/lib/utils';
 
@@ -118,7 +118,7 @@ export function VersionInlineEditor({
               className="h-8 w-8 p-0"
             >
               {updateVersionMutation.isPending ? (
-                <bapXLoader customSize={16} />
+                <BapXLoader customSize={16} />
               ) : (
                 <Check className="h-4 w-4" />
               )}

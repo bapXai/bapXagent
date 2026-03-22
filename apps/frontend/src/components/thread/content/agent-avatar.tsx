@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useAgentFromCache } from '@/hooks/agents/use-agents';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { Bot } from 'lucide-react';
 import { cn } from '@/lib/utils';

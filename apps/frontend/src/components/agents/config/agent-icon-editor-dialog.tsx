@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import { Sparkles, Wand2 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { 
   Dialog, 
   DialogContent, 
@@ -372,7 +372,7 @@ Customize Worker Icon
               className="gap-2"
             >
               {generateIconMutation.isPending ? (
-                <bapXLoader customSize={16} />
+                <BapXLoader customSize={16} />
               ) : (
                 <Wand2 className="h-4 w-4" />
               )}

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Globe, Wrench, MessageSquare, ChevronLeft } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
   Dialog,
   DialogContent,
@@ -17,7 +17,7 @@ import type { BaseAgentData } from '@/components/ui/unified-agent-card';
 import type { MarketplaceTemplate } from './installation/types';
 import { MarketplaceAgentPreviewDialog } from './marketplace-agent-preview-dialog';
 import { useRouter } from 'next/navigation';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 
@@ -198,8 +198,8 @@ export function AgentCreationModal({ open, onOpenChange, onSuccess }: AgentCreat
               {/* Logo & Header */}
               <div className="flex flex-col items-center text-center mb-6 sm:mb-8">
                 <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-muted/50">
-                  <bapXLogo size={28} variant="symbol" className="sm:hidden" />
-                  <bapXLogo size={36} variant="symbol" className="hidden sm:block" />
+                  <BapXLogo size={28} variant="symbol" className="sm:hidden" />
+                  <BapXLogo size={36} variant="symbol" className="hidden sm:block" />
                 </div>
                 <DialogTitle className="text-xl sm:text-2xl font-semibold text-foreground">
                   Create a new Worker
@@ -248,7 +248,7 @@ export function AgentCreationModal({ open, onOpenChange, onSuccess }: AgentCreat
                             {option.label}
                           </span>
                           {isLoading && (
-                            <bapXLoader customSize={16} />
+                            <BapXLoader customSize={16} />
                           )}
                         </div>
                         <p className="text-xs sm:text-sm text-muted-foreground mt-0.5">
@@ -276,8 +276,8 @@ export function AgentCreationModal({ open, onOpenChange, onSuccess }: AgentCreat
               {/* Logo & Header */}
               <div className="flex flex-col items-center text-center mb-5 sm:mb-6">
                 <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-muted/50">
-                  <bapXLogo size={28} variant="symbol" className="sm:hidden" />
-                  <bapXLogo size={36} variant="symbol" className="hidden sm:block" />
+                  <BapXLogo size={28} variant="symbol" className="sm:hidden" />
+                  <BapXLogo size={36} variant="symbol" className="hidden sm:block" />
                 </div>
                 <DialogTitle className="text-xl sm:text-2xl font-semibold text-foreground">
                   Describe your Worker

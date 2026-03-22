@@ -14,7 +14,7 @@ import {
   XCircle,
   Plus,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useCredentialProfilesForMcp } from '@/hooks/mcp/use-credential-profiles';
 
 interface ComposioCredentialProfileSelectorProps {
@@ -47,7 +47,7 @@ export const ComposioCredentialProfileSelector: React.FC<ComposioCredentialProfi
     return (
       <div className={className}>
         <div className="flex items-center gap-2">
-          <bapXLoader customSize={16} />
+          <BapXLoader customSize={16} />
           <span className="text-sm text-muted-foreground">Loading profiles...</span>
         </div>
       </div>

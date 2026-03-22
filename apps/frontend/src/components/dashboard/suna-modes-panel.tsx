@@ -72,7 +72,7 @@ import {
   NotebookPen,
   type LucideIcon,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Card } from '@/components/ui/card';
@@ -2400,7 +2400,7 @@ export function bapXModesPanel({
                 {isPdfLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm rounded-lg z-10">
                     <div className="flex flex-col items-center gap-3">
-                      <bapXLoader size="medium" />
+                      <BapXLoader size="medium" />
                       <p className="text-sm text-muted-foreground">Loading preview...</p>
                     </div>
                   </div>

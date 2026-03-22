@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertCircle, Clock, PlugZap, Lock, Zap } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { SimplifiedScheduleConfig } from './providers/simplified-schedule-config';
 import { TriggerProvider, ScheduleTriggerConfig } from './types';
 
@@ -229,7 +229,7 @@ export const OneClickIntegrations: React.FC<OneClickIntegrationsProps> = ({
                 className="flex items-center"
               >
                 {isLoading ? (
-                  <bapXLoader customSize={16} className="mr-2" />
+                  <BapXLoader customSize={16} className="mr-2" />
                 ) : (
                   config.icon
                 )}

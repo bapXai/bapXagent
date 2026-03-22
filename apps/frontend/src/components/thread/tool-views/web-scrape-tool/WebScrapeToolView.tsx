@@ -9,7 +9,7 @@ import {
   Copy,
   Check,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ToolViewProps } from '../types';
 import { getToolTitle } from '../utils';
 import { extractWebScrapeData } from './_utils';
@@ -201,7 +201,7 @@ export function WebScrapeToolView({
                     </span>
 
                     {/* bapX loading animation */}
-                    <bapXLoader customSize={16} />
+                    <BapXLoader customSize={16} />
                   </motion.div>
                 );
               })}

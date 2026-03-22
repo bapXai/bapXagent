@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, memo } from 'react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface StreamingLoaderProps {
   message?: string;
@@ -24,7 +24,7 @@ export const StreamingLoader = memo(function StreamingLoader({
   return (
     <div className={`flex items-center justify-center h-full w-full min-h-[300px] ${className || ''}`}>
       <div className="flex flex-col items-center gap-4">
-        <bapXLoader customSize={32} speed={1} />
+        <BapXLoader customSize={32} speed={1} />
         <span className="text-sm text-muted-foreground">
           {message || 'Generating content'}{dots}
         </span>

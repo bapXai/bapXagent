@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { AlertCircle, Brain, Search } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { MemoryCard } from './MemoryCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -104,7 +104,7 @@ export function MemoryList({
               >
                 {isLoading ? (
                   <>
-                    <bapXLoader size="small" className="mr-2" />
+                    <BapXLoader size="small" className="mr-2" />
                     {tCommon('loading')}
                   </>
                 ) : (

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Key, Plus, Trash2, Copy, Shield, ExternalLink } from 'lucide-react';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from '@/lib/toast';
 
@@ -220,7 +220,7 @@ export default function APIKeysPage() {
           <CardContent className="p-3 sm:p-6">
             <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
               <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-600/10 border border-blue-500/20 flex-shrink-0">
-                <bapXLogo size={18} variant="symbol" className="sm:[width:22px] sm:[height:22px] [filter:invert(37%)_sepia(93%)_saturate(1352%)_hue-rotate(207deg)_brightness(97%)_contrast(95%)] dark:[filter:invert(68%)_sepia(44%)_saturate(913%)_hue-rotate(186deg)_brightness(101%)_contrast(96%)]" />
+                <BapXLogo size={18} variant="symbol" className="sm:[width:22px] sm:[height:22px] [filter:invert(37%)_sepia(93%)_saturate(1352%)_hue-rotate(207deg)_brightness(97%)_contrast(95%)] dark:[filter:invert(68%)_sepia(44%)_saturate(913%)_hue-rotate(186deg)_brightness(101%)_contrast(96%)]" />
               </div>
               <div className="flex-1 space-y-2 sm:space-y-3">
                 <div>

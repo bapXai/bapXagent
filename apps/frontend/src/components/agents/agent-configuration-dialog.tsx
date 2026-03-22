@@ -44,10 +44,10 @@ import {
   Lock,
   Sparkles,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from '@/lib/toast';
 import { cn } from '@/lib/utils';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useAccountState } from '@/hooks/billing';
 import { usePricingModalStore } from '@/stores/pricing-modal-store';
@@ -596,7 +596,7 @@ export function AgentConfigurationDialog({
                   disabled={exportMutation.isPending}
                 >
                   {exportMutation.isPending ? (
-                    <bapXLoader customSize={16} />
+                    <BapXLoader customSize={16} />
                   ) : (
                     <Download className="h-4 w-4" />
                   )}
@@ -606,7 +606,7 @@ export function AgentConfigurationDialog({
           </DialogHeader>
           {isLoading ? (
             <div className="flex-1 flex items-center justify-center">
-              <bapXLoader size="large" />
+              <BapXLoader size="large" />
             </div>
           ) : (
             <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as typeof activeTab)} className="flex-1 flex flex-col min-h-0">
@@ -827,7 +827,7 @@ export function AgentConfigurationDialog({
             >
               {isSaving ? (
                 <>
-                  <bapXLoader customSize={16} className="mr-1" />
+                  <BapXLoader customSize={16} className="mr-1" />
                   Saving...
                 </>
               ) : (

@@ -27,7 +27,7 @@ import {
   ExternalLink,
   ChevronDown,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ToolViewProps } from '../types';
 import { formatTimestamp, getToolTitle } from '../utils';
 import { downloadPresentation, handleGoogleSlidesUpload } from '../utils/presentation-utils';
@@ -754,7 +754,7 @@ export function PresentationViewer({
                       disabled={isDownloading}
                     >
                       {isDownloading ? (
-                        <bapXLoader customSize={14} />
+                        <BapXLoader customSize={14} />
                       ) : (
                         <Download className="h-3.5 w-3.5" />
                       )}

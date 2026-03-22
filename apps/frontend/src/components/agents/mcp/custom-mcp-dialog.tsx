@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertCircle, CheckCircle2, Zap, ChevronRight, Sparkles, Server } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
@@ -421,7 +421,7 @@ export const CustomMCPDialog: React.FC<CustomMCPDialogProps> = ({
               >
                 {isSaving ? (
                   <>
-                    <bapXLoader customSize={16} className="mr-1" />
+                    <BapXLoader customSize={16} className="mr-1" />
                     Adding MCP Server...
                   </>
                 ) : (
@@ -441,7 +441,7 @@ export const CustomMCPDialog: React.FC<CustomMCPDialogProps> = ({
               >
                 {isValidating ? (
                   <>
-                    <bapXLoader customSize={20} className="mr-1" />
+                    <BapXLoader customSize={20} className="mr-1" />
                     Connecting to MCP server...
                   </>
                 ) : (

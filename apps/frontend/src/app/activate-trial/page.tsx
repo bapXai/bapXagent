@@ -3,13 +3,13 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CreditCard, Zap, Shield, ArrowRight, CheckCircle, LogOut } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from '@/lib/toast';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect, Suspense, lazy } from 'react';
 import { useTrialStatus, useStartTrial, useAccountState } from '@/hooks/billing';
 import { Skeleton } from '@/components/ui/skeleton';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/client';
 import { clearUserLocalStorage } from '@/lib/utils/clear-local-storage';
@@ -126,7 +126,7 @@ export default function ActivateTrialPage() {
         <CardHeader className="text-center space-y-4">
           <div>
             <CardTitle className="text-2xl font-medium flex items-center justify-center gap-2">
-              <bapXLogo />
+              <BapXLogo />
               <span>Welcome to bapX</span>
             </CardTitle>
             <CardDescription className="mt-2">
@@ -180,7 +180,7 @@ export default function ActivateTrialPage() {
             >
               {startTrialMutation.isPending ? (
                 <>
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                   Starting trial...
                 </>
               ) : (

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { usePricingModalStore } from '@/stores/pricing-modal-store';
 
 // Regex to match <upgrade/> tags
@@ -53,7 +53,7 @@ export const UpgradeButtonCTA: React.FC<UpgradeButtonCTAProps> = ({
       )}
     >
       <div className="flex-shrink-0 w-10 h-10 bg-muted-foreground/20 border border-muted-foreground/20 rounded-xl flex items-center justify-center">
-        <bapXLogo size={20} variant="symbol" />
+        <BapXLogo size={20} variant="symbol" />
       </div>
 
       <div className="flex-1 min-w-0">

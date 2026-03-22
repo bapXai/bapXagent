@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, CheckCircle2, AlertCircle } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ApifyApproval } from '@/hooks/apify/use-apify-approvals';
 import { useApproveApifyRequest, useGetApifyApprovalStatus } from '@/hooks/apify/use-apify-approvals';
 
@@ -106,7 +106,7 @@ export function ApifyApprovalInline({ approval, threadId, onApproved }: ApifyApp
         >
           {approveMutation.isPending ? (
             <>
-              <bapXLoader size="small" className="mr-2" />
+              <BapXLoader size="small" className="mr-2" />
               Approving...
             </>
           ) : (

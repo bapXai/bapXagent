@@ -18,7 +18,7 @@ import {
   Download,
   ExternalLink,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ToolViewProps } from '../types';
 import { formatTimestamp } from '../utils';
 import { cn } from '@/lib/utils';
@@ -239,7 +239,7 @@ export function ApifyToolView({
                 `bg-gradient-to-br ${config.color}`,
                 "border-white/20"
               )}>
-                <bapXLoader size="medium" variant="white" />
+                <BapXLoader size="medium" variant="white" />
               </div>
               
               {viewType === 'run' ? (

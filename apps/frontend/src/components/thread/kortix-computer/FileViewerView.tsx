@@ -16,7 +16,7 @@ import {
   FileText,
   Download,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
   EditableFileRenderer,
   getEditableFileType,
@@ -864,7 +864,7 @@ export function FileViewerView({
   if (presentationFolderInfo.isFolder && isFolderValidated === null) {
     return (
       <div className="h-full flex flex-col items-center justify-center bg-background">
-        <bapXLoader customSize={32} />
+        <BapXLoader customSize={32} />
         <p className="text-sm text-muted-foreground mt-4">Checking folder...</p>
       </div>
     );
@@ -1023,7 +1023,7 @@ export function FileViewerView({
                     className="h-8 w-8 p-0 bg-transparent border border-border rounded-xl text-muted-foreground"
                     title="Saving..."
                   >
-                    <bapXLoader size="small" />
+                    <BapXLoader size="small" />
                   </Button>
                 ) : mdEditorControls.saveState === 'saved' ? (
                   <Button
@@ -1092,7 +1092,7 @@ export function FileViewerView({
                 className="h-8 px-3 gap-1.5 text-xs bg-transparent border border-border rounded-xl text-muted-foreground hover:text-foreground hover:bg-accent/50"
               >
                 {isLoadingVersions ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <svg className="h-3.5 w-3.5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1114,7 +1114,7 @@ export function FileViewerView({
             <DropdownMenuContent align="end" className="max-h-[400px] overflow-y-auto w-[320px]">
               {isLoadingVersions ? (
                 <div className="flex items-center justify-center py-8">
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                   <span className="ml-2 text-sm text-muted-foreground">Loading history...</span>
                 </div>
               ) : fileVersions.length === 0 ? (
@@ -1225,7 +1225,7 @@ export function FileViewerView({
               title="Download file"
             >
               {isDownloading ? (
-                <bapXLoader size="small" />
+                <BapXLoader size="small" />
               ) : (
                 <Download className="h-4 w-4" />
               )}
@@ -1269,7 +1269,7 @@ export function FileViewerView({
           if (!isSandboxReady && sandboxStatus) {
             return (
               <div className="h-full w-full max-w-full flex flex-col items-center justify-center min-w-0">
-                <bapXLoader size="medium" className="mb-3" />
+                <BapXLoader size="medium" className="mb-3" />
                 <p className="text-sm text-muted-foreground">
                   {sandboxStatus === 'STARTING' && (isAutoStarting ? 'Waking up computer...' : 'Computer starting...')}
                   {sandboxStatus === 'OFFLINE' && 'Computer offline'}
@@ -1288,7 +1288,7 @@ export function FileViewerView({
 
           return (isCachedFileLoading || isLoadingVersionContent || (hasError && isStillRetrying)) ? (
           <div className="h-full w-full max-w-full flex flex-col items-center justify-center min-w-0">
-            <bapXLoader size="medium" className="mb-3" />
+            <BapXLoader size="medium" className="mb-3" />
             <p className="text-sm text-muted-foreground">
               {isLoadingVersionContent ? 'Loading version...' : `Loading ${fileName}`}
             </p>
@@ -1415,7 +1415,7 @@ export function FileViewerView({
 
           {revertLoadingInfo ? (
             <div className="py-6 flex items-center justify-center">
-              <bapXLoader size="medium" />
+              <BapXLoader size="medium" />
             </div>
           ) : revertCommitInfo ? (
             <div className="mt-2">
@@ -1506,7 +1506,7 @@ export function FileViewerView({
           <DialogFooter>
             <Button variant="ghost" onClick={() => setRevertModalOpen(false)} disabled={revertInProgress}>Cancel</Button>
             <Button onClick={performRevert} disabled={revertInProgress || (revertMode === 'single' && !revertCurrentRelativePath)}>
-              {revertInProgress ? (<><bapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
+              {revertInProgress ? (<><BapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
             </Button>
           </DialogFooter>
 

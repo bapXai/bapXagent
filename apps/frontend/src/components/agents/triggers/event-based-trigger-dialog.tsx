@@ -12,7 +12,7 @@ import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Search, ArrowLeft, Info, Zap, ChevronRight, Plus, Sparkles, CheckCircle2, Link2, Activity } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useComposioAppsWithTriggers, useComposioAppTriggers, useCreateComposioEventTrigger, ComposioTriggerType } from '@/hooks/composio/use-composio-triggers';
 import { useUpdateTrigger } from '@/hooks/triggers';
 import { useComposioProfiles } from '@/hooks/composio/use-composio-profiles';
@@ -693,7 +693,7 @@ export const EventBasedTriggerDialog: React.FC<EventBasedTriggerDialogProps> = (
                                     {isEditMode && !selectedTrigger && (loadingTriggers || !selectedApp) ? (
                                         <div className="flex-1 flex items-center justify-center p-6">
                                             <div className="text-center space-y-3">
-                                                <bapXLoader size="large" className="mx-auto" />
+                                                <BapXLoader size="large" className="mx-auto" />
                                                 <p className="text-sm text-muted-foreground">Loading trigger configuration...</p>
                                                 {triggersError && (
                                                     <p className="text-xs text-destructive">Error: {String(triggersError)}</p>
@@ -781,7 +781,7 @@ export const EventBasedTriggerDialog: React.FC<EventBasedTriggerDialogProps> = (
                                                                         {loadingProfiles ? (
                                                                             <SelectItem value="__loading__" disabled>
                                                                                 <div className="flex items-center gap-2">
-                                                                                    <bapXLoader customSize={12} />
+                                                                                    <BapXLoader customSize={12} />
                                                                                     <span>Loading...</span>
                                                                                 </div>
                                                                             </SelectItem>
@@ -854,7 +854,7 @@ export const EventBasedTriggerDialog: React.FC<EventBasedTriggerDialogProps> = (
                                                         >
                                                             {(isEditMode ? updateTrigger.isPending : createTrigger.isPending) ? (
                                                                 <>
-                                                                    <bapXLoader customSize={12} className="mr-2" />
+                                                                    <BapXLoader customSize={12} className="mr-2" />
                                                                     {isEditMode ? 'Updating...' : 'Creating...'}
                                                                 </>
                                                             ) : (

@@ -3,7 +3,7 @@ import { ToolViewProps } from '../types';
 import { formatTimestamp, getToolTitle } from '../utils';
 import { getToolIcon } from '../../utils';
 import { CheckCircle, AlertCircle, AlertTriangle } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 
 export interface ToolViewWrapperProps extends ToolViewProps {
@@ -99,7 +99,7 @@ export function ToolViewWrapper({
 
             {isStreaming && showStatus && (
               <div className="flex items-center gap-2">
-                <bapXLoader customSize={14} />
+                <BapXLoader customSize={14} />
                 <span>{customStatus?.streaming || "Processing..."}</span>
               </div>
             )}

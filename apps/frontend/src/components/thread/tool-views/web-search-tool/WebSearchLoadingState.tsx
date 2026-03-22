@@ -24,7 +24,7 @@ import {
   type LucideIcon
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface QueryStyle {
   icon: LucideIcon;
@@ -336,7 +336,7 @@ export function WebSearchLoadingState({
                   </span>
 
                   {/* bapX loading animation */}
-                  <bapXLoader customSize={16} />
+                  <BapXLoader customSize={16} />
                 </motion.div>
               );
             })}

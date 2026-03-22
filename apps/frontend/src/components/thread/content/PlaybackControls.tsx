@@ -12,7 +12,7 @@ import { UnifiedMessage } from '@/components/thread/types';
 import { safeJsonParse } from '@/components/thread/utils';
 import Link from 'next/link';
 import { HIDE_STREAMING_XML_TAGS } from '@/components/thread/utils';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 export interface PlaybackControlsProps {
   messages: UnifiedMessage[];
@@ -525,7 +525,7 @@ export const PlaybackControls = ({
             <div className="flex items-center gap-2">
               <div className="flex items-center justify-center w-6 h-6 rounded-md overflow-hidden bg-primary/10">
                 <Link href="/">
-                  <bapXLogo size={14} />
+                  <BapXLogo size={14} />
                 </Link>
               </div>
               <h1>

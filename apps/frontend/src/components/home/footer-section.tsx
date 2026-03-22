@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 export function FooterSection() {
   const tablet = useMediaQuery('(max-width: 1024px)');
@@ -29,10 +29,10 @@ export function FooterSection() {
               <Link href="/" className="flex items-center gap-2">
                 {/* Wordmark on mobile, symbol on desktop */}
                 <span className="md:hidden">
-                  <bapXLogo size={18} variant="logomark" />
+                  <BapXLogo size={18} variant="logomark" />
                 </span>
                 <span className="hidden md:block">
-                  <bapXLogo size={20} variant="symbol" />
+                  <BapXLogo size={20} variant="symbol" />
                 </span>
               </Link>
               <p className="tracking-tight text-muted-foreground font-medium">

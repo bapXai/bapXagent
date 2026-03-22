@@ -112,7 +112,7 @@ export function MobileAppInterstitial() {
             <div className="p-5 flex items-center gap-4">
               {/* App Icon */}
               <div className="w-14 h-14 bg-black dark:bg-white rounded-xl flex items-center justify-center flex-shrink-0">
-                <bapXLogo className="w-7 h-7 text-white dark:text-black" />
+                <BapXLogo className="w-7 h-7 text-white dark:text-black" />
               </div>
 
               {/* Text */}

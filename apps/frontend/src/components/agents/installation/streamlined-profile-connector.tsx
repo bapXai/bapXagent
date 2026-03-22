@@ -9,7 +9,7 @@ import {
   Shield,
   Settings
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from '@/lib/toast';
 import { ComposioCredentialProfileSelector } from '@/components/agents/composio/composio-credential-profile-selector';
 import { ComposioConnector } from '@/components/agents/composio/composio-connector';
@@ -320,7 +320,7 @@ export const ProfileConnector: React.FC<ProfileConnectorProps> = ({
         >
           {isCreatingProfile ? (
             <>
-              <bapXLoader customSize={16} className="mr-1" />
+              <BapXLoader customSize={16} className="mr-1" />
               Creating...
             </>
           ) : (

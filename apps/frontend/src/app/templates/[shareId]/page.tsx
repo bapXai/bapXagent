@@ -26,7 +26,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -38,7 +38,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import ColorThief from 'colorthief';
 import { AgentAvatar } from '@/components/thread/content/agent-avatar';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 interface MarketplaceTemplate {
   template_id: string;
@@ -326,7 +326,7 @@ export default function TemplateSharePage() {
     return (
       <div className="min-h-screen">
         <div className="flex items-center justify-center h-screen">
-          <bapXLoader size="large" />
+          <BapXLoader size="large" />
         </div>
       </div>
     );
@@ -405,7 +405,7 @@ export default function TemplateSharePage() {
             <div className="flex h-14 items-center">
               <div className="flex items-center">
                 <Link href="/" className="flex items-center">
-                  <bapXLogo size={24} />
+                  <BapXLogo size={24} />
                 </Link>
               </div>
               <div className="flex items-center space-x-3 ml-auto">

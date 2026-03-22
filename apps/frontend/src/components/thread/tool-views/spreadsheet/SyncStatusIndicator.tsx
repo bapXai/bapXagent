@@ -1,5 +1,5 @@
 import { Cloud, CloudOff, Check, AlertCircle, RefreshCw } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -48,7 +48,7 @@ export function SyncStatusIndicator({
     switch (status) {
       case 'syncing':
         return {
-          icon: <bapXLoader customSize={14} />,
+          icon: <BapXLoader customSize={14} />,
           label: 'Saving...',
           ...grayStyle,
         };

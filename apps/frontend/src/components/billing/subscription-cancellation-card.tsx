@@ -11,7 +11,7 @@ import {
   Calendar,
   Shield
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from '@/lib/toast';
 import { useReactivateSubscription } from '@/hooks/billing';
 import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
@@ -113,7 +113,7 @@ export function SubscriptionCancellationCard({
             >
               {reactivateSubscriptionMutation.isPending ? (
                 <>
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                   Reactivating...
                 </>
               ) : (

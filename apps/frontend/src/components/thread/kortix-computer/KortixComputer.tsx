@@ -8,7 +8,7 @@ import { createPortal } from 'react-dom';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ApiMessageType } from '@/components/thread/types';
 import { Globe, CircleDashed } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useIsMobile } from '@/hooks/utils';
 import { ToolView } from '../tool-views/wrapper';
 import { motion, AnimatePresence } from 'framer-motion';

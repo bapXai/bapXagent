@@ -23,7 +23,7 @@ import {
   Globe,
   ArrowRight
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import Link from 'next/link';
 import { TriggerWithAgent } from '@/hooks/triggers/use-all-triggers';
 import { useDeleteTrigger, useToggleTrigger, useUpdateTrigger } from '@/hooks/triggers';
@@ -75,7 +75,7 @@ const getStatusIcon = (status: string) => {
       return <XCircle className="h-4 w-4 text-red-500" />;
     case 'running':
     case 'in_progress':
-      return <bapXLoader size="small" />;
+      return <BapXLoader size="small" />;
     default:
       return <Clock className="h-4 w-4 text-muted-foreground" />;
   }

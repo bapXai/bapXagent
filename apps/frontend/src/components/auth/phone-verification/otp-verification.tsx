@@ -19,7 +19,7 @@ import {
   Trash2,
   MessageSquare,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface OtpVerificationProps {
   phoneNumber?: string;
@@ -213,7 +213,7 @@ export function OtpVerification({
               >
                 {isLoading ? (
                   <>
-                    <bapXLoader size="small" />
+                    <BapXLoader size="small" />
                     {t('verifying')}
                   </>
                 ) : (
@@ -248,7 +248,7 @@ export function OtpVerification({
                 >
                   {isLoading ? (
                     <>
-                      <bapXLoader size="small" />
+                      <BapXLoader size="small" />
                       {t('sending')}
                     </>
                   ) : (

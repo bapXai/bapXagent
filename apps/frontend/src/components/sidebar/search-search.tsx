@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useState, useEffect, useMemo, ReactNode } from 'react';
 import { Search, X, FileText, Loader2 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useRouter, usePathname } from 'next/navigation';
 import { format } from 'date-fns';
 
@@ -288,7 +288,7 @@ export function SidebarSearch() {
                     <div className="flex items-center justify-between w-full">
                       <div className="flex items-center">
                         {isThreadLoading ? (
-                          <bapXLoader size="small" className="mr-2" />
+                          <BapXLoader size="small" className="mr-2" />
                         ) : (
                           <FileText className="mr-2 h-4 w-4 shrink-0" />
                         )}

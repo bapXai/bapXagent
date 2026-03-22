@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Phone } from "lucide-react";
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { PhoneInput as PhoneInputComponent } from "@/components/ui/phone-input";
 
 function getUserCountryCode(): string {
@@ -154,7 +154,7 @@ export function PhoneInput({ onSubmit, isLoading = false, error = null }: PhoneI
           >
             {isLoading ? (
               <>
-                <bapXLoader size="small" className="mr-2" />
+                <BapXLoader size="small" className="mr-2" />
                 {t('sendingCode')}
               </>
             ) : (

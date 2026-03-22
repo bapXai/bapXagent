@@ -24,7 +24,7 @@ import {
   Frame,
   Palette,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -1557,7 +1557,7 @@ function FloatingToolbar({
                   Cancel
                 </Button>
                 <Button onClick={applyTextReplacement} disabled={!newTextContent.trim() || isProcessing}>
-                  {isProcessing ? <bapXLoader size="small" className="mr-2" /> : null}
+                  {isProcessing ? <BapXLoader size="small" className="mr-2" /> : null}
                   {isLowQualityOcr ? 'Apply' : 'Replace'}
                 </Button>
               </div>
@@ -1598,7 +1598,7 @@ function FloatingToolbar({
             onClick={applyCrop}
             disabled={isCropping}
           >
-            {isCropping ? <bapXLoader size="small" className="mr-1" /> : null}
+            {isCropping ? <BapXLoader size="small" className="mr-1" /> : null}
             Create
           </Button>
         </div>
@@ -1636,7 +1636,7 @@ function FloatingToolbar({
                 disabled={isProcessing}
               >
                 {activeAction === 'upscale' ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <span className="text-[10px] font-bold border border-current rounded px-0.5">HD</span>
                 )}
@@ -1657,7 +1657,7 @@ function FloatingToolbar({
                 disabled={isProcessing}
               >
                 {activeAction === 'remove_bg' ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <rect x="1" y="1" width="6" height="6" />
@@ -1682,7 +1682,7 @@ function FloatingToolbar({
                 onClick={startTextEditMode}
                 disabled={isProcessing || textEditMode}
               >
-                {isDetectingText ? <bapXLoader size="small" /> : <Type className="h-3.5 w-3.5" />}
+                {isDetectingText ? <BapXLoader size="small" /> : <Type className="h-3.5 w-3.5" />}
                 Edit text
               </Button>
             </TooltipTrigger>
@@ -1718,7 +1718,7 @@ function FloatingToolbar({
                     disabled={isProcessing}
                   >
                     {activeAction === 'mark_edit' ? (
-                      <bapXLoader size="small" />
+                      <BapXLoader size="small" />
                     ) : (
                       <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <rect x="2" y="2" width="12" height="12" strokeDasharray="3 2" rx="1" />
@@ -1753,7 +1753,7 @@ function FloatingToolbar({
                 >
                   {isProcessing ? (
                     <>
-                      <bapXLoader size="small" className="mr-2" />
+                      <BapXLoader size="small" className="mr-2" />
                       Generating...
                     </>
                   ) : (
@@ -2117,7 +2117,7 @@ function FrameFloatingToolbar({
                 onClick={onExportFrame}
                 disabled={isExporting}
               >
-                {isExporting ? <bapXLoader size="small" /> : <Download className="h-3.5 w-3.5" />}
+                {isExporting ? <BapXLoader size="small" /> : <Download className="h-3.5 w-3.5" />}
                 Export
               </Button>
             </TooltipTrigger>
@@ -2322,7 +2322,7 @@ function MultiSelectToolbar({
                 onClick={openMergeDialog}
               >
                 {isProcessing ? (
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                 ) : (
                   <Layers className="h-3.5 w-3.5" />
                 )}
@@ -2421,7 +2421,7 @@ function MultiSelectToolbar({
                 onClick={() => { setShowMergeDialog(false); handleMerge(); }}
                 disabled={!mergePrompt.trim() || isProcessing}
               >
-                {isProcessing ? <bapXLoader size="small" className="mr-2" /> : null}
+                {isProcessing ? <BapXLoader size="small" className="mr-2" /> : null}
                 Create
               </Button>
             </div>
@@ -3384,7 +3384,7 @@ export function CanvasRenderer({ content, filePath, fileName, sandboxId, classNa
   };
 
   if (!isMounted) {
-    return <div className="flex items-center justify-center h-full w-full bg-card"><bapXLoader size="medium" /></div>;
+    return <div className="flex items-center justify-center h-full w-full bg-card"><BapXLoader size="medium" /></div>;
   }
 
   // If no content AND no canvasData yet, show loading state
@@ -3392,7 +3392,7 @@ export function CanvasRenderer({ content, filePath, fileName, sandboxId, classNa
   if (!content && !canvasData) {
     return (
       <div className="flex flex-col items-center justify-center h-full w-full gap-4 bg-background">
-        <bapXLoader size="medium" />
+        <BapXLoader size="medium" />
         <div className="text-muted-foreground text-center text-sm">
           Loading canvas...
         </div>
@@ -3430,7 +3430,7 @@ export function CanvasRenderer({ content, filePath, fileName, sandboxId, classNa
             </div>
 
             <Tooltip><TooltipTrigger asChild><Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleResetView}><Maximize className="h-4 w-4" /></Button></TooltipTrigger><TooltipContent>Reset View</TooltipContent></Tooltip>
-            <Tooltip><TooltipTrigger asChild><Button id="canvas-save-btn" variant="ghost" size="icon" className={cn("h-8 w-8 relative", hasUnsavedChanges && "text-primary")} onClick={handleSave} disabled={isSaving || !onSave}>{isSaving ? <bapXLoader size="small" /> : <Save className="h-4 w-4" />}{hasUnsavedChanges && <span className="absolute top-0.5 right-0.5 w-2 h-2 bg-primary rounded-full" />}</Button></TooltipTrigger><TooltipContent>{isSaving ? 'Saving...' : hasUnsavedChanges ? 'Save changes (⌘S)' : 'No changes'}</TooltipContent></Tooltip>
+            <Tooltip><TooltipTrigger asChild><Button id="canvas-save-btn" variant="ghost" size="icon" className={cn("h-8 w-8 relative", hasUnsavedChanges && "text-primary")} onClick={handleSave} disabled={isSaving || !onSave}>{isSaving ? <BapXLoader size="small" /> : <Save className="h-4 w-4" />}{hasUnsavedChanges && <span className="absolute top-0.5 right-0.5 w-2 h-2 bg-primary rounded-full" />}</Button></TooltipTrigger><TooltipContent>{isSaving ? 'Saving...' : hasUnsavedChanges ? 'Save changes (⌘S)' : 'No changes'}</TooltipContent></Tooltip>
             <Tooltip><TooltipTrigger asChild><Button variant="ghost" size="icon" className="h-8 w-8" onClick={handleUploadClick}><ImagePlus className="h-4 w-4" /></Button></TooltipTrigger><TooltipContent>Add Image</TooltipContent></Tooltip>
             {/* Add Frame with presets */}
             <Popover>
@@ -3507,7 +3507,7 @@ export function CanvasRenderer({ content, filePath, fileName, sandboxId, classNa
                   >
                     {isGenerating ? (
                       <>
-                        <bapXLoader size="small" className="mr-2" />
+                        <BapXLoader size="small" className="mr-2" />
                         Generating...
                       </>
                     ) : (

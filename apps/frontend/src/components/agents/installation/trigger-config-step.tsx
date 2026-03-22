@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Info } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -207,7 +207,7 @@ export const TriggerConfigStep: React.FC<TriggerConfigStepProps> = ({
       <h4 className="font-medium mb-3">Trigger Configuration</h4>
       {isLoadingFields ? (
         <div className="flex items-center justify-center py-8">
-          <bapXLoader customSize={24} />
+          <BapXLoader customSize={24} />
           <span className="ml-2 text-sm text-muted-foreground">Loading configuration fields...</span>
         </div>
       ) : error ? (

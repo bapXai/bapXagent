@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import { Computer, CornerDownLeft, Paperclip, Mic, Zap, FolderOpen, Globe, Presentation, BarChart3, FileText, Search, Image as ImageIcon, ChevronRight, File, Database } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { motion } from 'framer-motion';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 
 type ViewType = 'terminal' | 'files' | 'browser';
 type IconType = 'computer' | 'presentation' | 'chart' | 'file' | 'search' | 'image' | 'database';
@@ -358,7 +358,7 @@ export function ExampleShowcase() {
                         <IconComponent className="h-2.5 w-2.5 text-muted-foreground flex-shrink-0" />
                         <span className="font-mono text-[9px] text-foreground">{step.title}</span>
                         {isCurrentStep && (
-                          <bapXLoader size="small" className="ml-0.5" />
+                          <BapXLoader size="small" className="ml-0.5" />
                         )}
                       </button>
                     </div>
@@ -445,7 +445,7 @@ export function ExampleShowcase() {
               {/* Computer Header */}
               <div className="border-b px-3 py-2 flex items-center justify-between bg-card shrink-0">
                 <div className="flex items-center gap-1.5">
-                  <bapXLogo size={12} />
+                  <BapXLogo size={12} />
                   <span className="text-xs font-medium">bapX Computer</span>
                 </div>
                 <div className="flex items-center gap-0.5 border rounded-full bg-card p-1 relative">

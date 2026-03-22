@@ -6,7 +6,7 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { cn } from '@/lib/utils';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface DocxRendererProps {
     url?: string;
@@ -157,7 +157,7 @@ export function DocxRenderer({ url, blob, className }: DocxRendererProps) {
             {/* Loading overlay */}
             {(!isRendered || isRendering) && (
                 <div className="absolute inset-0 flex items-center justify-center bg-muted/50 z-10">
-                    <bapXLoader size="medium" />
+                    <BapXLoader size="medium" />
                 </div>
             )}
 

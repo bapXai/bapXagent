@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Search, ChevronDown, ChevronRight, Settings2, Wrench } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { icons } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { toast } from '@/lib/toast';
@@ -259,7 +259,7 @@ export const GranularToolConfiguration = ({
   if (isLoadingTools) {
     return (
       <div className="flex items-center justify-center h-full">
-        <bapXLoader size="large" />
+        <BapXLoader size="large" />
         <span className="ml-2 text-muted-foreground">Loading tools...</span>
       </div>
     );

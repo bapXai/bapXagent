@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useThreads } from '@/hooks/threads/use-threads';
 import { FileBrowserView } from '@/components/thread/kortix-computer/FileBrowserView';
 import { FileViewerView } from '@/components/thread/kortix-computer/FileViewerView';
@@ -94,7 +94,7 @@ export default function FilesPage() {
   if (isThreadsLoading) {
     return (
       <div className="flex items-center justify-center h-[100dvh] bg-background">
-        <bapXLoader size="medium" />
+        <BapXLoader size="medium" />
       </div>
     );
   }

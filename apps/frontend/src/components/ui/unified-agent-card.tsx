@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Plus, Download, CheckCircle, Globe, GlobeLock, GitBranch, Trash2, MoreVertical, User, ArrowRight } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -25,7 +25,7 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { cn } from '@/lib/utils';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { AgentAvatar } from '@/components/thread/content/agent-avatar';
 import { useComposioToolkitIcon } from '@/hooks/composio/use-composio';
 
@@ -600,7 +600,7 @@ export const UnifiedAgentCard: React.FC<UnifiedAgentCardProps> = ({
             >
               {isActioning ? (
                 <>
-                  <bapXLoader size="small" className="mr-2" />
+                  <BapXLoader size="small" className="mr-2" />
                   Installing...
                 </>
               ) : (
@@ -648,7 +648,7 @@ export const UnifiedAgentCard: React.FC<UnifiedAgentCardProps> = ({
             >
               {isActioning ? (
                 <>
-                  <bapXLoader size="small" />
+                  <BapXLoader size="small" />
                   {data.is_public ? 'Unpublishing...' : 'Publishing...'}
                 </>
               ) : (
@@ -725,7 +725,7 @@ export const UnifiedAgentCard: React.FC<UnifiedAgentCardProps> = ({
               >
                 {isActioning ? (
                   <>
-                    <bapXLoader size="small" />
+                    <BapXLoader size="small" />
                     Deleting...
                   </>
                 ) : (

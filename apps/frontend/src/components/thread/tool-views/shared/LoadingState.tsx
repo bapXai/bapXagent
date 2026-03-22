@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Progress } from '@/components/ui/progress';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface LoadingStateProps {
   icon?: LucideIcon;
@@ -54,11 +54,11 @@ export function LoadingState({
       <div className="text-center w-full max-w-sm">
         <div className={cn("w-12 h-12 rounded-full mx-auto mb-6 flex items-center justify-center", bgColor)}>
           {usebapXLoader ? (
-            <bapXLoader customSize={20} />
+            <BapXLoader customSize={20} />
           ) : Icon ? (
             <Icon className={cn("h-5 w-5", iconColor)} />
           ) : (
-            <bapXLoader customSize={20} />
+            <BapXLoader customSize={20} />
           )}
         </div>
         

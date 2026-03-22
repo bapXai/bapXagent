@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { FileText, Download, CheckCircle2, AlertCircle } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ToolViewProps } from '../types';
 import { formatTimestamp } from '../utils';
 import { toast } from '@/lib/toast';
@@ -175,8 +175,8 @@ export function PdfExportToolView({
             >
               {isDownloading ? (
                 <>
-                  <bapXLoader customSize={16} variant="white" className="mr-2 dark:hidden" />
-                  <bapXLoader customSize={16} variant="black" className="mr-2 hidden dark:flex" />
+                  <BapXLoader customSize={16} variant="white" className="mr-2 dark:hidden" />
+                  <BapXLoader customSize={16} variant="black" className="mr-2 hidden dark:flex" />
                   <span>Downloading...</span>
                 </>
               ) : (

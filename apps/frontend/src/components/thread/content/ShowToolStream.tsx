@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { getToolIcon, getUserFriendlyToolName, extractPrimaryParam } from '@/components/thread/utils';
 import { AppIcon } from '../tool-views/shared/AppIcon';
 import { useSmoothToolField } from '@/hooks/messages';
@@ -915,7 +915,7 @@ export const ShowToolStream: React.FC<ShowToolStreamProps> = ({
                         <span className="font-mono text-xs text-foreground flex-1">{displayName}</span>
                         {paramDisplay && <span className="ml-1 text-xs text-muted-foreground truncate max-w-[200px]" title={paramDisplay}>{paramDisplay}</span>}
                         {!isCompleted && (
-                            <bapXLoader size="small" className="ml-auto" />
+                            <BapXLoader size="small" className="ml-auto" />
                         )}
                     </button>
 

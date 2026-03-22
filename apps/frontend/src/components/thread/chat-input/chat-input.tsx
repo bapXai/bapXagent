@@ -19,7 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { X, Image as ImageIcon, Presentation, BarChart3, FileText, Search, Palette, Video, Code2, Sparkles, Brain as BrainIcon, MessageSquare, CornerDownLeft, Plug, Lock } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { VoiceRecorder } from './voice-recorder';
 import { useTheme } from 'next-themes';
 import { useTranslations } from 'next-intl';
@@ -690,7 +690,7 @@ const SubmitButton = memo(function SubmitButton({
             disabled={isDisabled}
           >
             {((loading || isUploading) && !isAgentRunning) ? (
-              <bapXLoader size="small" customSize={20} variant={buttonLoaderVariant} />
+              <BapXLoader size="small" customSize={20} variant={buttonLoaderVariant} />
             ) : showAddToQueue ? (
               <MessageSquare className="h-4 w-4" />
             ) : isAgentRunning ? (

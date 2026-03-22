@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Settings, Clock } from "lucide-react";
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { toast } from "@/lib/toast";
 import {
   useSystemStatus,
@@ -95,7 +95,7 @@ export default function AdminUtilsPage() {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <bapXLoader size="large" />
+        <BapXLoader size="large" />
       </div>
     );
   }

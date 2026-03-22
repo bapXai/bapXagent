@@ -9,7 +9,7 @@ import { NavWorkers } from '@/components/sidebar/nav-workers';
 import { NavGlobalConfig } from '@/components/sidebar/nav-global-config';
 import { NavTriggerRuns } from '@/components/sidebar/nav-trigger-runs';
 import { NavUserWithTeams } from '@/components/sidebar/nav-user-with-teams';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { siteConfig } from '@/lib/site-config';
 import {
   Sidebar,
@@ -256,7 +256,7 @@ export function SidebarLeft({
           )}>
 
             <Link href="/dashboard" onClick={() => isMobile && setOpenMobile(false)} className="flex items-center justify-center">
-              <bapXLogo 
+              <BapXLogo 
                 size={20} 
                 className={cn(
                   "flex-shrink-0 transition-[transform,opacity] duration-300 ease-out hover:rotate-180 hover:duration-700 transform-gpu",

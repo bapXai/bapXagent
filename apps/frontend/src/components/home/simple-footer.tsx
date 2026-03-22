@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site-config';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { LocaleSwitcher } from '@/components/home/locale-switcher';
 import { ThemeToggle } from '@/components/home/theme-toggle';
 import { useGitHubStars } from '@/hooks/utils';
@@ -21,10 +21,10 @@ export function SimpleFooter() {
             <Link href="/" className="inline-flex items-center gap-2 group">
               {/* Wordmark on mobile, symbol on desktop */}
               <span className="md:hidden">
-                <bapXLogo size={18} variant="logomark" />
+                <BapXLogo size={18} variant="logomark" />
               </span>
               <span className="hidden md:block">
-                <bapXLogo size={24} variant="symbol" />
+                <BapXLogo size={24} variant="symbol" />
               </span>
             </Link>
             {/* Social links */}

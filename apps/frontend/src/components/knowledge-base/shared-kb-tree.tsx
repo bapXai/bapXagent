@@ -16,7 +16,7 @@ import {
     GripVerticalIcon,
     FileTextIcon
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -272,7 +272,7 @@ export function SharedTreeItem({
                                             <p className="text-sm text-muted-foreground truncate">
                                                 {uploadStatus?.isUploading ? (
                                                     <>
-                                                        <bapXLoader size="small" className="inline mr-1.5" />
+                                                        <BapXLoader size="small" className="inline mr-1.5" />
                                                         <span>
                                                             Uploading {uploadStatus.currentFile}... ({uploadStatus.completedFiles || 0}/{uploadStatus.totalFiles || 0})
                                                         </span>
@@ -348,7 +348,7 @@ export function SharedTreeItem({
                         <div className="flex flex-col mt-2">
                             {isLoadingEntries ? (
                                 <div className="flex items-center gap-3 px-4 py-4 text-sm text-muted-foreground bg-muted/20 rounded-lg mx-4 mb-2" style={{ paddingLeft: `${level * 20 + 32}px` }}>
-                                    <bapXLoader size="small" />
+                                    <BapXLoader size="small" />
                                     <span>Loading files...</span>
                                 </div>
                             ) : item.children && item.children.length > 0 ? (
@@ -428,7 +428,7 @@ export function SharedTreeItem({
                                     <p className="text-sm text-muted-foreground truncate">
                                         {itemIsMoving ? (
                                             <>
-                                                <bapXLoader size="small" className="inline mr-1.5" />
+                                                <BapXLoader size="small" className="inline mr-1.5" />
                                                 Moving...
                                             </>
                                         ) : (

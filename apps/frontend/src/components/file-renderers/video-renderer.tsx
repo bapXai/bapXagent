@@ -15,7 +15,7 @@ import {
   Info,
   Download,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface VideoRendererProps {
   url: string;
@@ -191,7 +191,7 @@ export function VideoRenderer({
       <div className={cn('relative rounded-2xl overflow-hidden bg-black/5 dark:bg-black/20', className)}>
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-muted/50">
-            <bapXLoader size="medium" />
+            <BapXLoader size="medium" />
           </div>
         )}
         {hasError ? (
@@ -255,7 +255,7 @@ export function VideoRenderer({
       {/* Loading state */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black z-10">
-          <bapXLoader size="large" variant="white" />
+          <BapXLoader size="large" variant="white" />
         </div>
       )}
 

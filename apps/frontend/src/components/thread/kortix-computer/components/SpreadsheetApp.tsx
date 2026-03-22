@@ -16,7 +16,7 @@ import {
   Home,
   Download
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 import { useDirectoryQuery } from '@/hooks/files/use-file-queries';
 import { backendApi } from '@/lib/api-client';
@@ -485,7 +485,7 @@ export const SpreadsheetApp = memo(function SpreadsheetApp({
             className="flex items-center justify-center w-10 h-10 text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors disabled:opacity-50 shrink-0"
             title="Refresh spreadsheet"
           >
-            {activeEditorHandle?.isSyncing ? <bapXLoader size="small" /> : <RefreshCw className="w-4 h-4" />}
+            {activeEditorHandle?.isSyncing ? <BapXLoader size="small" /> : <RefreshCw className="w-4 h-4" />}
           </button>
         )}
         <button
@@ -522,7 +522,7 @@ export const SpreadsheetApp = memo(function SpreadsheetApp({
           size="lg"
         >
           {isCreating ? (
-            <bapXLoader size="small" />
+            <BapXLoader size="small" />
           ) : (
             <Plus className="w-4 h-4" />
           )}
@@ -593,7 +593,7 @@ export const SpreadsheetApp = memo(function SpreadsheetApp({
                   disabled={isCreating}
                   className="mt-4 text-zinc-500 hover:text-zinc-600 dark:text-zinc-400 text-sm font-medium disabled:opacity-50 flex items-center gap-2"
                 >
-                  {isCreating && <bapXLoader size="small" />}
+                  {isCreating && <BapXLoader size="small" />}
                   {isCreating ? 'Creating...' : 'Create New'}
                 </button>
               </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Clock, CheckCircle, AlertTriangle, Timer } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { ToolViewProps } from '../types';
 import { formatTimestamp, getToolTitle } from '../utils';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -128,7 +128,7 @@ export function WaitToolView({
             {/* Timer icon with bapXLoader animation when streaming */}
             <div className="relative mb-6">
               {isStreaming ? (
-                <bapXLoader customSize={96} />
+                <BapXLoader customSize={96} />
               ) : (
                 <Timer className="h-24 w-24 text-muted-foreground" />
               )}
@@ -155,7 +155,7 @@ export function WaitToolView({
               )}>
                 {isStreaming ? (
                   <span className="flex items-center gap-2">
-                    <bapXLoader customSize={12} />
+                    <BapXLoader customSize={12} />
                     Waiting in progress...
                   </span>
                 ) : (

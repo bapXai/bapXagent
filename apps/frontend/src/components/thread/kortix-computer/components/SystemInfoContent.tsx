@@ -2,8 +2,8 @@
 
 import { memo } from 'react';
 import { Cpu, HardDrive, MemoryStick, MapPin, AlertTriangle, Loader2 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { cn } from '@/lib/utils';
 import type { SandboxDetails, SandboxState, SandboxStatus } from '@/hooks/files/use-sandbox-details';
 import { getSandboxStatusLabel } from '@/hooks/files/use-sandbox-details';
@@ -89,7 +89,7 @@ export const SystemInfoContent = memo(function SystemInfoContent({
   if (isLoading) {
     return (
       <div className="h-full flex items-center justify-center">
-        <bapXLoader size="medium" />
+        <BapXLoader size="medium" />
       </div>
     );
   }
@@ -112,7 +112,7 @@ export const SystemInfoContent = memo(function SystemInfoContent({
     <div className="h-full overflow-auto p-6">
       <div className="flex flex-col items-center justify-center gap-4 mb-8">
         <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-background to-muted flex items-center justify-center border shadow-lg">
-          <bapXLogo size={40} />
+          <BapXLogo size={40} />
         </div>
         <div className="flex flex-col items-center justify-center">
           <h3 className="text-foreground font-semibold text-xl text-center">bapX Computer</h3>

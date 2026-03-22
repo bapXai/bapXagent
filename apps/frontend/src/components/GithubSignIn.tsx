@@ -6,7 +6,7 @@ import { toast } from '@/lib/toast';
 import { Icons } from './home/icons';
 // Using proper GitHub brand icon from Icons component
 import { useAuthMethodTracking } from '@/stores/auth-tracking';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 
@@ -166,7 +166,7 @@ export default function GitHubSignIn({ returnUrl, referralCode }: GitHubSignInPr
         type="button"
       >
         {isLoading ? (
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
         ) : (
           <Icons.github className="w-4 h-4" />
         )}

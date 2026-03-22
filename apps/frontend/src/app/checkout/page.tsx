@@ -3,7 +3,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Script from 'next/script';
 
@@ -155,7 +155,7 @@ function CheckoutContent() {
           </Card>
         ) : isLoading ? (
           <div className="flex flex-col items-center gap-4">
-            <bapXLoader size="xlarge" />
+            <BapXLoader size="xlarge" />
             <p className="text-gray-600 text-sm">Loading secure checkout...</p>
           </div>
         ) : (
@@ -173,7 +173,7 @@ export default function CheckoutPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <bapXLoader size="large" forceTheme="light" />
+        <BapXLoader size="large" forceTheme="light" />
       </div>
     }>
       <CheckoutContent />

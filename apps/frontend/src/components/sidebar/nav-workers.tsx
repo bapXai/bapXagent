@@ -8,7 +8,7 @@ import { AgentAvatar } from '@/components/thread/content/agent-avatar';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { NewAgentDialog } from '@/components/agents/new-agent-dialog';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useSidebar } from '@/components/ui/sidebar';
 import { useIsMobile } from '@/hooks/utils';
 import { usePricingModalStore } from '@/stores/pricing-modal-store';
@@ -83,7 +83,7 @@ export function NavWorkers() {
       <div className="flex-1 overflow-y-auto space-y-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
         {isLoading ? (
           <div className="flex items-center justify-center py-8">
-            <bapXLoader size="small" />
+            <BapXLoader size="small" />
           </div>
         ) : filteredAgents.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-8 text-center">

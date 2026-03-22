@@ -19,9 +19,9 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Search, Check, ChevronDown, Plus, Plug, Brain, LibraryBig, Zap, Sparkles, ChevronLeft } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useAgents } from '@/hooks/agents/use-agents';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -259,7 +259,7 @@ const LoggedInMenu: React.FC<UnifiedConfigMenuProps> = memo(function LoggedInMen
                             >
                                 {isFetching ? (
                                     <>
-                                        <bapXLoader size="small" className="mr-2" />
+                                        <BapXLoader size="small" className="mr-2" />
                                         Loading...
                                     </>
                                 ) : (
@@ -491,7 +491,7 @@ const LoggedInMenu: React.FC<UnifiedConfigMenuProps> = memo(function LoggedInMen
                 </div>
             ) : (
                 <div className="flex items-center gap-1.5">
-                    <bapXLogo size={20} />
+                    <BapXLogo size={20} />
                     <ChevronDown size={12} className="opacity-60" />
                 </div>
             )}
@@ -646,7 +646,7 @@ const GuestMenu: React.FC<UnifiedConfigMenuProps> = memo(function GuestMenu() {
                     >
                         <div className="flex items-center gap-2 min-w-0 max-w-[180px]">
                             <div className="flex-shrink-0">
-                                <bapXLogo size={20} />
+                                <BapXLogo size={20} />
                             </div>
                             <span className="truncate text-sm font-medium">bapX</span>
                             <ChevronDown size={12} className="opacity-60 flex-shrink-0" />

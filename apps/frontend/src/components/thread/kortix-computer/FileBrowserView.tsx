@@ -25,7 +25,7 @@ import {
   Eye,
   ExternalLink,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -350,7 +350,7 @@ function VideoThumbnail({
   if (isLoading) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-muted/10">
-        <bapXLoader size="small" />
+        <BapXLoader size="small" />
       </div>
     );
   }
@@ -385,7 +385,7 @@ function SpreadsheetThumbnail({ data, isLoading }: { data: string[][]; isLoading
   if (isLoading) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-white dark:bg-zinc-900">
-        <bapXLoader size="small" />
+        <BapXLoader size="small" />
       </div>
     );
   }
@@ -538,7 +538,7 @@ function ThumbnailPreview({
   if (isLoading && (needsBlobContent || needsTextContent)) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-muted/10">
-        <bapXLoader size="small" />
+        <BapXLoader size="small" />
       </div>
     );
   }
@@ -1460,7 +1460,7 @@ export function FileBrowserView({
         className="text-muted-foreground"
       >
         {isDownloadingAll ? (
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
         ) : (
           <Download className="h-4 w-4" />
         )}
@@ -1474,7 +1474,7 @@ export function FileBrowserView({
         className="text-muted-foreground"
       >
         {isUploading ? (
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
         ) : (
           <Upload className="h-4 w-4" />
         )}
@@ -1490,7 +1490,7 @@ export function FileBrowserView({
             className="gap-1.5 text-muted-foreground"
           >
             {isLoadingVersions ? (
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
             ) : (
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1506,7 +1506,7 @@ export function FileBrowserView({
         <DropdownMenuContent align="end" className="max-h-[400px] overflow-y-auto w-[320px]">
           {isLoadingVersions ? (
             <div className="flex items-center justify-center py-8">
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
               <span className="ml-2 text-sm text-muted-foreground">Loading history...</span>
             </div>
           ) : workspaceVersions.length === 0 ? (
@@ -1557,7 +1557,7 @@ export function FileBrowserView({
       {/* Download progress */}
       {downloadProgress && (
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground px-2">
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
           <span>
             {downloadProgress.total > 0
               ? `${downloadProgress.current}/${downloadProgress.total}`
@@ -1576,7 +1576,7 @@ export function FileBrowserView({
         title="Download folder"
       >
         {isDownloadingAll ? (
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
         ) : (
           <Download className="h-4 w-4" />
         )}
@@ -1591,7 +1591,7 @@ export function FileBrowserView({
         title={selectedVersion ? 'Cannot upload while viewing historical version' : 'Upload file'}
       >
         {isUploading ? (
-          <bapXLoader size="small" />
+          <BapXLoader size="small" />
         ) : (
           <Upload className="h-4 w-4" />
         )}
@@ -1609,7 +1609,7 @@ export function FileBrowserView({
             className="h-8 px-3 gap-1.5 text-xs bg-transparent border border-border rounded-xl text-muted-foreground hover:text-foreground hover:bg-accent/50"
           >
             {isLoadingVersions ? (
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
             ) : (
               <svg className="h-3.5 w-3.5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1631,7 +1631,7 @@ export function FileBrowserView({
         <DropdownMenuContent align="end" className="max-h-[400px] overflow-y-auto w-[320px]">
           {isLoadingVersions ? (
             <div className="flex items-center justify-center py-8">
-              <bapXLoader size="small" />
+              <BapXLoader size="small" />
               <span className="ml-2 text-sm text-muted-foreground">Loading history...</span>
             </div>
           ) : workspaceVersions.length === 0 ? (
@@ -1799,7 +1799,7 @@ export function FileBrowserView({
         <div className="flex-1 flex flex-col overflow-hidden">
           {(isLoadingFiles || isLoadingVersionFiles) ? (
             <div className="flex-1 flex items-center justify-center">
-              <bapXLoader size="medium" />
+              <BapXLoader size="medium" />
             </div>
           ) : mainOutputFiles.length === 0 && otherFiles.length === 0 ? (
             <div className="flex-1 flex items-center justify-center">
@@ -1934,7 +1934,7 @@ export function FileBrowserView({
               <span className="text-xs text-zinc-700 dark:text-zinc-400">This will replace current files with the selected version snapshot.</span>
             </div>
             {revertLoadingInfo ? (
-              <div className="py-6 flex items-center justify-center"><bapXLoader size="medium" /></div>
+              <div className="py-6 flex items-center justify-center"><BapXLoader size="medium" /></div>
             ) : revertCommitInfo ? (
               <div className="mt-2">
                 <div className="text-sm font-medium mb-1">{revertCommitInfo.message}</div>
@@ -1955,7 +1955,7 @@ export function FileBrowserView({
             <DialogFooter>
               <Button variant="ghost" onClick={() => setRevertModalOpen(false)} disabled={revertInProgress}>Cancel</Button>
               <Button onClick={performRevert} disabled={revertInProgress}>
-                {revertInProgress ? (<><bapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
+                {revertInProgress ? (<><BapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
               </Button>
             </DialogFooter>
             <DialogClose />
@@ -2002,7 +2002,7 @@ export function FileBrowserView({
         {hasSandbox && !isSandboxReady && sandboxStatus ? (
           <div className="h-full w-full flex flex-col items-center justify-center p-8 bg-zinc-50 dark:bg-zinc-900/50">
             <div className="flex flex-col items-center space-y-4 max-w-sm text-center">
-              <bapXLoader size="medium" />
+              <BapXLoader size="medium" />
               <div className="space-y-2">
                 <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
                   {sandboxStatus === 'STARTING' && (isAutoStarting ? 'Waking up computer...' : 'Computer starting...')}
@@ -2021,7 +2021,7 @@ export function FileBrowserView({
           </div>
         ) : (isLoadingFiles || isLoadingVersionFiles) ? (
           <div className="h-full w-full max-w-full flex flex-col items-center justify-center gap-2 min-w-0">
-            <bapXLoader size="medium" />
+            <BapXLoader size="medium" />
             <p className="text-xs text-muted-foreground">
               {isLoadingVersionFiles ? 'Loading version...' : 'Loading files...'}
             </p>
@@ -2248,7 +2248,7 @@ export function FileBrowserView({
 
           {revertLoadingInfo ? (
             <div className="py-6 flex items-center justify-center">
-              <bapXLoader size="medium" />
+              <BapXLoader size="medium" />
             </div>
           ) : revertCommitInfo ? (
             <div className="mt-2">
@@ -2297,7 +2297,7 @@ export function FileBrowserView({
           <DialogFooter>
             <Button variant="ghost" onClick={() => setRevertModalOpen(false)} disabled={revertInProgress}>Cancel</Button>
             <Button onClick={performRevert} disabled={revertInProgress}>
-              {revertInProgress ? (<><bapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
+              {revertInProgress ? (<><BapXLoader size="small" className="mr-2" />Restoring...</>) : 'Restore'}
             </Button>
           </DialogFooter>
 

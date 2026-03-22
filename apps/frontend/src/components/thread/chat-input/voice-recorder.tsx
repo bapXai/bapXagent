@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import { Mic, Square } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { Button } from '@/components/ui/button';
 import {
     Tooltip,
@@ -154,7 +154,7 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = memo(function VoiceRe
             case 'recording':
                 return <Square className="h-5 w-5" />;
             case 'processing':
-                return <bapXLoader size="small" />;
+                return <BapXLoader size="small" />;
             default:
                 return <Mic className="h-5 w-5" />;
         }

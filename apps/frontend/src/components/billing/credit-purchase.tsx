@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertCircle } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { billingApi } from '@/lib/api/billing';
 import { toast } from '@/lib/toast';
 import { formatCredits } from '@agentpress/shared';
@@ -186,7 +186,7 @@ export function CreditPurchaseModal({
                     >
                         {isProcessing ? (
                             <>
-                                <bapXLoader size="small" className="mr-2" />
+                                <BapXLoader size="small" className="mr-2" />
                                 Processing...
                             </>
                         ) : (

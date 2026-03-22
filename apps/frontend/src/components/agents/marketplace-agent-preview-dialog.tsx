@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Bot, Download, Wrench, Plug, Tag, User, Calendar, Share, Cpu, Eye, Zap, MessageSquare, ArrowRight, Sparkles, FileText } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { toast } from '@/lib/toast';
 import type { MarketplaceTemplate, UsageExampleMessage } from '@/components/agents/installation/types';
@@ -299,7 +299,7 @@ export const MarketplaceAgentPreviewDialog: React.FC<MarketplaceAgentPreviewDial
               >
                 {isInstalling ? (
                   <>
-                    <bapXLoader customSize={20} className="mr-1" />
+                    <BapXLoader customSize={20} className="mr-1" />
                     Installing...
                   </>
                 ) : (

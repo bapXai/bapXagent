@@ -40,7 +40,7 @@ import {
   MessageSquare,
   ExternalLink,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { useAdminUserDetails, useAdminUserThreads, useAdminUserActivity } from '@/hooks/admin/use-admin-users';
 import {
   useUserBillingSummary,
@@ -676,7 +676,7 @@ export function AdminUserDetailsDialog({
                       >
                         {processRefundMutation.isPending ? (
                           <>
-                            <bapXLoader size="small" className="mr-2" />
+                            <BapXLoader size="small" className="mr-2" />
                             Processing...
                           </>
                         ) : (

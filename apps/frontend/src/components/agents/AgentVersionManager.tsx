@@ -15,7 +15,7 @@ import {
   History,
   Plus
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { formatDistanceToNow } from 'date-fns';
 import { useAgentVersions, useActivateAgentVersion } from '@/hooks/agents/use-agent-versions';
 import { Agent } from '@/hooks/agents/utils';
@@ -37,7 +37,7 @@ export function AgentVersionManager({ agent, onCreateVersion }: AgentVersionMana
       <Card>
         <CardContent className="p-6">
           <div className="flex items-center justify-center">
-            <bapXLoader size="large" />
+            <BapXLoader size="large" />
           </div>
         </CardContent>
       </Card>

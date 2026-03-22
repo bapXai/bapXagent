@@ -6,7 +6,7 @@ import { CheckCircle2, AlertCircle } from 'lucide-react';
 import { useAuth } from '@/components/AuthProvider';
 import { useInitializeAccount } from '@/hooks/account';
 import { createClient } from '@/lib/supabase/client';
-import { bapXLogo } from '@/components/sidebar/bapx-logo';
+import { BapXLogo } from '@/components/sidebar/bapx-logo';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -128,7 +128,7 @@ export default function SettingUpPage() {
         </Suspense>
 
         <div className="relative z-10 w-full max-w-[456px] flex flex-col items-center gap-8">
-          <bapXLogo size={32} />
+          <BapXLogo size={32} />
 
           {(status === 'checking' || status === 'initializing') && (
             <>
@@ -153,8 +153,8 @@ export default function SettingUpPage() {
                       </div>
                     </div>
                     <div className="h-12 w-12 flex items-center justify-center">
-                      <Suspense fallback={<bapXLoader size="small" />}>
-                        <bapXLoader size="small" customSize={24} />
+                      <Suspense fallback={<BapXLoader size="small" />}>
+                        <BapXLoader size="small" customSize={24} />
                       </Suspense>
                     </div>
                   </div>

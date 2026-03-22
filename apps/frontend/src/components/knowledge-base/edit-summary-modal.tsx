@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { FileText, Sparkles, Save, X, Info } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 
 interface EditSummaryModalProps {
     isOpen: boolean;
@@ -139,7 +139,7 @@ export function EditSummaryModal({
                     >
                         {isLoading ? (
                             <>
-                                <bapXLoader size="small" />
+                                <BapXLoader size="small" />
                                 Saving...
                             </>
                         ) : (

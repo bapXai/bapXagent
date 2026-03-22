@@ -34,7 +34,7 @@ import {
     Upload,
     Brain,
 } from 'lucide-react';
-import { bapXLoader } from '@/components/ui/bapx-loader';
+import { BapXLoader } from '@/components/ui/bapx-loader';
 import { cn } from '@/lib/utils';
 import {
     Tooltip,
@@ -519,7 +519,7 @@ function GeneralTab({ onClose }: { onClose: () => void }) {
                                 className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
                             >
                                 {isUploadingAvatar ? (
-                                    <bapXLoader size="small" variant="white" />
+                                    <BapXLoader size="small" variant="white" />
                                 ) : (
                                     <Camera className="h-5 w-5 text-white" />
                                 )}
