@@ -1,13 +1,6 @@
 <svg width="708" height="142" viewBox="0 0 708 142" fill="none" xmlns="http://www.w3.org/2000/svg">
-<!-- bapX Logo - Wordmark (replaces logomark-white.svg) -->
-<g fill="white">
-<!-- b -->
-<path d="M45 142V57.5C45 35.2 58.8 22 82.5 22C105.8 22 119 38.5 119 58.5V83.5C119 115.5 99 142 65 142H0V0H27V142H45ZM72 118C85.5 118 92 103.5 92 84.5V57.5C92 43 84.5 35 72 35C58.5 35 52 46.5 52 57.5V84.5C52 100.5 59.5 118 72 118Z"/>
-<!-- a -->
-<path d="M165 142V108.5C165 86.5 152.5 76 135.5 76C119.5 76 108 85.5 108 103.5V142H81V42H106.5L108 54.5C113.5 42.5 125.5 36 140.5 36C164.5 36 177 51.5 177 75.5V142H165ZM149.5 108.5C149.5 95.5 144.5 88 134.5 88C124.5 88 118 95.5 118 108.5V142H149.5V108.5Z"/>
-<!-- p -->
-<path d="M255 142H228V42H253.5L255 54.5C260.5 42.5 272.5 36 287.5 36C311.5 36 324 51.5 324 75.5V99.5C324 131.5 304 158 270 158H228V142H255ZM277 118C290.5 118 297 103.5 297 84.5V75.5C297 61 289.5 53 277 53C263.5 53 257 64.5 257 75.5V102.5C257 118.5 264.5 118 277 118Z"/>
-<!-- X -->
-<path d="M380 142L418 94.5L456 142H486L442 89.5L483 42H453L418 86.5L383 42H353L397 94.5L350 142H380Z"/>
-</g>
+  <!-- bapX Logo - Text Wordmark -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="900" font-size="100" fill="white" letter-spacing="-2">
+    bapX
+  </text>
 </svg>
