@@ -21,7 +21,7 @@ import { DynamicGreeting } from '@/components/ui/dynamic-greeting';
 
 // Lazy load heavy components
 const bapXModesPanel = lazy(() => 
-  import('@/components/dashboard/suna-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
+  import('@/components/dashboard/bapX-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
 );
 const GoogleSignIn = lazy(() => import('@/components/GoogleSignIn'));
 
