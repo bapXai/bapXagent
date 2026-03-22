@@ -13,7 +13,7 @@ import { DynamicGreeting } from '@/components/ui/dynamic-greeting';
 
 // Lazy load heavy components
 const bapXModesPanel = lazy(() => 
-  import('@/components/dashboard/bapx-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
+  import('@/components/dashboard/suna-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
 );
 const AgentRunLimitBanner = lazy(() => 
   import('@/components/thread/agent-run-limit-banner').then(mod => ({ default: mod.AgentRunLimitBanner }))

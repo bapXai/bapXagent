@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { usebapXModesStore } from '@/stores/bapx-modes-store';
+import { usebapXModesStore } from '@/stores/suna-modes-store';
 import {
   Image as ImageIcon,
   Presentation,

@@ -1,8 +1,20 @@
-import { createBrowserClient } from '@supabase/ssr'
+/**
+ * Trailbase Browser Client
+ * 
+ * Replaces Supabase client with Trailbase authentication
+ */
+
+import { createTrailbaseClient } from '@/lib/trailbase/client';
+
+// Singleton instance
+let client: ReturnType<typeof createTrailbaseClient> | null = null;
 
 export function createClient() {
-  return createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  )
+  if (client) {
+    return client;
+  }
+
+  const trailbaseUrl = process.env.NEXT_PUBLIC_TRAILBASE_URL || 'http://localhost:4000';
+  client = createTrailbaseClient(trailbaseUrl);
+  return client;
 }

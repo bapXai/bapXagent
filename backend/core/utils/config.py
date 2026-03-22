@@ -316,11 +316,11 @@ class Configuration:
     # AWS Bedrock authentication
     AWS_BEARER_TOKEN_BEDROCK: Optional[str] = None
     
-    # Supabase configuration
-    SUPABASE_URL: str
-    SUPABASE_ANON_KEY: str
-    SUPABASE_SERVICE_ROLE_KEY: str
-    SUPABASE_JWT_SECRET: str
+    # Trailbase configuration (replaces Supabase)
+    TRAILBASE_URL: str = "http://localhost:4000/v1"
+    TRAILBASE_ADMIN_KEY: str = "vn2gVGUvxLMs9w5cwYK6"
+    TRAILBASE_PUBLIC_URL: str = "http://localhost:4000"
+    TRAILBASE_JWT_SECRET: Optional[str] = None
     
     REDIS_HOST: Optional[str] = "localhost"
     REDIS_PORT: Optional[int] = 6379
@@ -417,7 +417,7 @@ class Configuration:
     # Webhook configuration
     WEBHOOK_BASE_URL: Optional[str] = None
     TRIGGER_WEBHOOK_SECRET: Optional[str] = None
-    SUPABASE_WEBHOOK_SECRET: Optional[str] = None  # Secret for Supabase database webhook authentication
+    TRAILBASE_WEBHOOK_SECRET: Optional[str] = None  # Secret for Trailbase database webhook authentication
     
     # Email configuration
     

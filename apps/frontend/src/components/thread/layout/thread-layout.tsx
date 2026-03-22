@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, memo, useMemo } from 'react';
 import * as ResizablePrimitive from 'react-resizable-panels';
 import { SiteHeader } from '@/components/thread/thread-site-header';
-import { bapXComputer, ToolCallInput } from '@/components/thread/bapx-computer';
+import { bapXComputer, ToolCallInput } from '@/components/thread/kortix-computer';
 import { Project } from '@/lib/api/threads';
 import { ApiMessageType } from '@/components/thread/types';
 import { useIsMobile } from '@/hooks/utils';

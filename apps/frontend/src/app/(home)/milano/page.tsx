@@ -9,13 +9,13 @@ import { useAuth } from '@/components/AuthProvider';
 import { useRouter } from 'next/navigation';
 import { useOptimisticAgentStart } from '@/hooks/threads';
 import { useAgentSelection } from '@/stores/agent-selection-store';
-import { usebapXModePersistence } from '@/stores/bapx-modes-store';
+import { usebapXModePersistence } from '@/stores/suna-modes-store';
 import { useQuery } from '@tanstack/react-query';
 import { agentKeys } from '@/hooks/agents/keys';
 import { getAgents } from '@/hooks/agents/utils';
 
 const bapXModesPanel = lazy(() => 
-  import('@/components/dashboard/bapx-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
+  import('@/components/dashboard/suna-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
 );
 
 // Mobile users are redirected at the edge by middleware (hyper-fast)

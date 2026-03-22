@@ -32,7 +32,7 @@ import { ToolCallInput } from './floating-tool-preview';
 import { ChatSnack } from './chat-snack';
 import { Brain, Zap, Database, ArrowDown, ArrowUp, Wrench, Clock, Send } from 'lucide-react';
 import { useMessageQueueStore } from '@/stores/message-queue-store';
-import { usebapXModesStore } from '@/stores/bapx-modes-store';
+import { usebapXModesStore } from '@/stores/suna-modes-store';
 import { useComposioToolkitIcon } from '@/hooks/composio/use-composio';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ContextUsageIndicator } from '../ContextUsageIndicator';

@@ -4,13 +4,14 @@ from core.utils.logger import logger
 from core.utils.config import config
 from core.utils.config import Configuration
 import asyncio
+from typing import Optional
 
 load_dotenv()
 
 # logger.debug("Initializing Daytona sandbox configuration")
 daytona_config = DaytonaConfig(
     api_key=config.DAYTONA_API_KEY,
-    api_url=config.DAYTONA_SERVER_URL, 
+    api_url=config.DAYTONA_SERVER_URL,
     target=config.DAYTONA_TARGET,
 )
 
@@ -29,38 +30,46 @@ if daytona_config.target:
 else:
     logger.warning("No Daytona target found in environment variables")
 
-daytona = AsyncDaytona(daytona_config)
+# Initialize Daytona client only if API key is provided
+daytona: Optional[AsyncDaytona] = None
+if daytona_config.api_key:
+    daytona = AsyncDaytona(daytona_config)
+else:
+    logger.warning("Daytona client not initialized - sandbox features will be unavailable")
 
 async def get_or_start_sandbox(sandbox_id: str) -> AsyncSandbox:
     """Retrieve a sandbox by ID, check its state, and start it if needed."""
-    
+
+    if not daytona:
+        raise RuntimeError("Daytona client not initialized - configure DAYTONA_API_KEY in environment")
+
     logger.info(f"Getting or starting sandbox with ID: {sandbox_id}")
 
     try:
         sandbox = await daytona.get(sandbox_id)
-        
+
         # Check if sandbox needs to be started
         if sandbox.state in [SandboxState.ARCHIVED, SandboxState.STOPPED, SandboxState.ARCHIVING]:
             logger.info(f"Sandbox is in {sandbox.state} state. Starting...")
             try:
                 await daytona.start(sandbox)
-                
+
                 # Wait for sandbox to reach STARTED state
                 for _ in range(30):
                     await asyncio.sleep(1)
                     sandbox = await daytona.get(sandbox_id)
                     if sandbox.state == SandboxState.STARTED:
                         break
-                
+
                 # Start supervisord in a session when restarting
                 await start_supervisord_session(sandbox)
             except Exception as e:
                 logger.error(f"Error starting sandbox: {e}")
                 raise e
-        
+
         logger.info(f"Sandbox {sandbox_id} is ready")
         return sandbox
-        
+
     except Exception as e:
         logger.error(f"Error retrieving or starting sandbox: {str(e)}")
         raise e
@@ -81,15 +90,18 @@ async def start_supervisord_session(sandbox: AsyncSandbox):
 
 async def create_sandbox(password: str, project_id: str = None) -> AsyncSandbox:
     """Create a new sandbox with all required services configured and running."""
-    
+
+    if not daytona:
+        raise RuntimeError("Daytona client not initialized - configure DAYTONA_API_KEY in environment")
+
     logger.info("Creating new Daytona sandbox environment")
     # logger.debug("Configuring sandbox with snapshot and environment variables")
-    
+
     labels = None
     if project_id:
         # logger.debug(f"Using sandbox_id as label: {project_id}")
         labels = {'id': project_id}
-        
+
     params = CreateSandboxFromSnapshotParams(
         snapshot=Configuration.SANDBOX_SNAPSHOT_NAME,
         public=True,
@@ -115,19 +127,22 @@ async def create_sandbox(password: str, project_id: str = None) -> AsyncSandbox:
         auto_stop_interval=15,
         auto_archive_interval=30,
     )
-    
+
     # Create the sandbox
     sandbox = await daytona.create(params)
     logger.info(f"Sandbox created with ID: {sandbox.id}")
-    
+
     # Start supervisord in a session for new sandbox
     await start_supervisord_session(sandbox)
-    
+
     logger.info(f"Sandbox environment successfully initialized")
     return sandbox
 
 async def delete_sandbox(sandbox_id: str) -> bool:
     """Delete a sandbox by its ID."""
+    if not daytona:
+        raise RuntimeError("Daytona client not initialized - configure DAYTONA_API_KEY in environment")
+
     logger.info(f"Deleting sandbox with ID: {sandbox_id}")
 
     try:

@@ -4,7 +4,7 @@ import { bapXLoader } from '@/components/ui/bapx-loader';
 import { getToolIcon, getUserFriendlyToolName, extractPrimaryParam } from '@/components/thread/utils';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { ToolCallInput } from '@/components/thread/bapx-computer';
+import { ToolCallInput } from '@/components/thread/kortix-computer';
 import { motion } from 'framer-motion';
 
 export type { ToolCallInput };

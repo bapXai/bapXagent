@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useLeadingDebouncedCallback } from '@/hooks/utils';
 import { useOptimisticAgentStart, AgentLimitInfo } from '@/hooks/threads';
 import { useAgentSelection } from '@/stores/agent-selection-store';
-import { usebapXModePersistence } from '@/stores/bapx-modes-store';
+import { usebapXModePersistence } from '@/stores/suna-modes-store';
 import { useAgents } from '@/hooks/agents/use-agents';
 import { useAuth } from '@/components/AuthProvider';
 import type { ChatInputHandles } from '@/components/thread/chat-input/chat-input';

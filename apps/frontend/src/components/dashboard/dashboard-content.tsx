@@ -38,7 +38,7 @@ const ModeIndicator = lazy(() =>
   import('@/components/thread/mode-indicator').then(mod => ({ default: mod.ModeIndicator }))
 );
 const bapXModesPanel = lazy(() => 
-  import('@/components/dashboard/bapx-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
+  import('@/components/dashboard/suna-modes-panel').then(mod => ({ default: mod.bapXModesPanel }))
 );
 
 export function DashboardContent() {

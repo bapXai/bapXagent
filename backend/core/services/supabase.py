@@ -138,43 +138,45 @@ class DBConnection:
             asyncio.create_task(old_storage.aclose())
 
     async def initialize(self):
-        """Initialize database connection."""
+        """Initialize database connection using Trailbase."""
         if self._initialized:
             return
-        
+
         # Lazily create the async lock (thread-safe via __new__)
         if self._async_lock is None:
             self._async_lock = asyncio.Lock()
-        
+
         async with self._async_lock:
             # Double-check after acquiring lock to prevent race condition
             if self._initialized:
                 return
-                
-        supabase_url = config.SUPABASE_URL
-        supabase_key = config.SUPABASE_SERVICE_ROLE_KEY or config.SUPABASE_ANON_KEY
-        
-        if not supabase_url or not supabase_key:
-            raise RuntimeError("SUPABASE_URL and key must be set")
+
+        # Use Trailbase configuration instead of Supabase
+        trailbase_url = config.TRAILBASE_URL
+        trailbase_key = config.TRAILBASE_ADMIN_KEY
+
+        if not trailbase_url or not trailbase_key:
+            raise RuntimeError("TRAILBASE_URL and key must be set")
 
         from supabase.lib.client_options import AsyncClientOptions
-        
+
         options = AsyncClientOptions(
             postgrest_client_timeout=SUPABASE_READ_TIMEOUT,
             storage_client_timeout=SUPABASE_READ_TIMEOUT,
             function_client_timeout=SUPABASE_READ_TIMEOUT,
         )
-        
-        self._client = await create_async_client(supabase_url, supabase_key, options=options)
+
+        # Point Supabase client to Trailbase endpoint for compatibility
+        # Trailbase provides Supabase-compatible API
+        self._client = await create_async_client(trailbase_url, trailbase_key, options=options)
         self._configure_clients()
         self._initialized = True
         self._init_time = time.time()
         self._request_count = 0
         self._error_count = 0
-        
-        key_type = "SERVICE_ROLE" if config.SUPABASE_SERVICE_ROLE_KEY else "ANON"
+
         logger.info(
-            f"Database initialized | key={key_type} pool={SUPABASE_MAX_CONNECTIONS} "
+            f"Database initialized (Trailbase) | pool={SUPABASE_MAX_CONNECTIONS} "
             f"http2={SUPABASE_HTTP2_ENABLED} connect_timeout={SUPABASE_CONNECT_TIMEOUT}s "
             f"pool_timeout={SUPABASE_POOL_TIMEOUT}s"
         )

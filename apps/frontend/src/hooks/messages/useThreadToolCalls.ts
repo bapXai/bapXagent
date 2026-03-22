@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import { toast } from '@/lib/toast';
-import { ToolCallInput } from '@/components/thread/bapx-computer';
+import { ToolCallInput } from '@/components/thread/kortix-computer';
 import { UnifiedMessage, ParsedMetadata, AgentStatus } from '@/components/thread/types';
 import { safeJsonParse } from '@/components/thread/utils';
 import { useIsMobile } from '@/hooks/utils';
