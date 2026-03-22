@@ -86,10 +86,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/bapx-favicon.svg', sizes: 'any', type: 'image/svg+xml' },
       { url: '/favicon.png', sizes: '32x32' },
       { url: '/favicon-light.png', sizes: '32x32', media: '(prefers-color-scheme: dark)' },
     ],
-    shortcut: '/favicon.png',
+    shortcut: '/bapx-favicon.svg',
     apple: [{ url: '/logo_black.png', sizes: '180x180' }],
   },
   manifest: '/manifest.json',

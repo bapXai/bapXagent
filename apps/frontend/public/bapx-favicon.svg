@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Binary X Logo - Favicon Version -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle background -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  
+  <!-- X shape -->
+  <g stroke="white" stroke-width="10" stroke-linecap="round">
+    <line x1="28" y1="28" x2="72" y2="72"/>
+    <line x1="72" y1="28" x2="28" y2="72"/>
+  </g>
+  
+  <!-- Binary dots -->
+  <circle cx="28" cy="28" r="3" fill="#fff"/>
+  <circle cx="72" cy="28" r="3" fill="#fff"/>
+  <circle cx="50" cy="50" r="4" fill="#fff"/>
+  <circle cx="28" cy="72" r="3" fill="#fff"/>
+  <circle cx="72" cy="72" r="3" fill="#fff"/>
+</svg>
