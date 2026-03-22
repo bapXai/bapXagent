@@ -335,6 +335,8 @@ NEXT_PUBLIC_USER_SUPABASE_ANON_KEY=
    ```
 
 4. **Check Console:** Always check Next.js console for errors after changes.
+   - **React Components:** Must use PascalCase (e.g., `BapXLogo`, not `bapXLogo`)
+   - **HTML Elements:** Must use lowercase (e.g., `div`, not `Div`)
    ```bash
    tail -f /root/Agent/frontend.log
    ```
