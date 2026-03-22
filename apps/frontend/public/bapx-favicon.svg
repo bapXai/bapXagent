@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <!-- Binary X Logo - Favicon Version -->
+  <!-- Binary X Logo for bapX - Favicon Version -->
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Circle background -->
-  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  <circle cx="50" cy="50" r="48" fill="url(#favGrad)"/>
   
   <!-- X shape -->
   <g stroke="white" stroke-width="10" stroke-linecap="round">

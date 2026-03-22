@@ -9,26 +9,25 @@ interface BapXLogoProps {
 }
 
 export function BapXLogo({ size = 24, variant = 'symbol', className }: BapXLogoProps) {
-  // For logomark variant, use logomark-white.svg which is already white
-  // and invert it for light mode using CSS (no JS needed)
+  // For logomark variant, use logomark-white.svg
   if (variant === 'logomark') {
     return (
       <img
         src="/logomark-white.svg"
         alt="bapX"
-        className={cn('invert dark:invert-0 flex-shrink-0', className)}
+        className={cn('flex-shrink-0', className)}
         style={{ height: `${size}px`, width: 'auto' }}
         suppressHydrationWarning
       />
     );
   }
 
-  // Default symbol variant behavior - invert for dark mode
+  // Default symbol variant - use favicon SVG
   return (
     <img
-      src="/bapx-symbol.svg"
+      src="/bapx-favicon.svg"
       alt="bapX"
-      className={cn('dark:invert flex-shrink-0', className)}
+      className={cn('flex-shrink-0', className)}
       style={{ width: `${size}px`, height: `${size}px` }}
       suppressHydrationWarning
     />
