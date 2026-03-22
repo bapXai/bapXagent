@@ -38,6 +38,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setSession(currentSession);
         setUser(currentSession?.user ?? null);
       } catch (error) {
+        console.error('AuthProvider: Failed to get session:', error);
       } finally {
         setIsLoading(false);
       }
@@ -45,6 +46,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     getInitialSession();
 
+    // Trailbase/Supabase auth state listener
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, newSession) => {
         setSession(newSession);
@@ -68,14 +70,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     );
 
     return () => {
-      authListener?.subscription.unsubscribe();
+      authListener?.subscription?.unsubscribe();
     };
-  }, [supabase]); // Removed isLoading from dependencies to prevent infinite loops
+  }, [supabase]);
 
   const signOut = async () => {
     try {
       await supabase.auth.signOut();
-      // Clear local storage after successful sign out
       clearUserLocalStorage();
     } catch (error) {
       console.error('❌ Error signing out:', error);
